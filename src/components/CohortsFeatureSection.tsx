@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function CohortsFeaturesSection() {
   return (
     <section className="relative overflow-hidden bg-black text-white">
-      {/* Background, soft purple blobs / ribbons */}
+      {/* Background gradients */}
       <div
         className="pointer-events-none absolute -left-40 -top-40 h-[520px] w-[720px] rounded-[999px] opacity-30 blur-3xl"
         style={{
@@ -19,24 +19,20 @@ export default function CohortsFeaturesSection() {
         }}
       />
       <div className="relative mx-auto max-w-7xl px-4 py-24 md:px-6 md:py-28">
-        {/* FEATURES badge */}
         <div className="mb-6 flex justify-center">
           <span className="rounded-full bg-zinc-900 px-3 py-1 text-[10px] font-semibold tracking-wider text-zinc-300 ring-1 ring-zinc-700/60">
             FEATURES
           </span>
         </div>
 
-        {/* Title */}
         <h2 className="mb-8 text-center text-3xl font-bold md:text-5xl">
           What can you do on{" "}
           <span className="relative inline-block">
             Cohorts?
-            {/* purple underline */}
             <span className="absolute -bottom-1 left-0 block h-1 w-full rounded-full bg-purple-500 md:-bottom-2 md:h-1.5" />
           </span>
         </h2>
 
-        {/* Toggle pills */}
         <div className="mb-20 flex justify-center gap-3">
           <button
             type="button"
@@ -52,20 +48,16 @@ export default function CohortsFeaturesSection() {
           </button>
         </div>
 
-        {/* Section 1: Create Community */}
+        {/* Create Community Section */}
         <div className="relative z-10 mb-28 flex flex-col items-center md:mb-32 md:flex-row">
-          {/* Left visuals */}
           <div className="relative w-full md:w-1/2">
-            {/* Dotted orbit */}
             <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dotted border-zinc-700/60 md:block" />
 
-            {/* Helper toast */}
             <div className="absolute -top-6 left-[38%] z-20 hidden -translate-x-1/2 items-center gap-2 rounded-xl bg-white px-3 py-1.5 text-xs font-semibold text-black shadow-lg shadow-black/40 md:flex">
               <span className="inline-block h-2 w-2 rounded-full bg-blue-500" />
               <span>Create your community &amp; approve instantly</span>
             </div>
 
-            {/* Main modal mock */}
             <Image
               src="/Content.png"
               width={460}
@@ -75,7 +67,6 @@ export default function CohortsFeaturesSection() {
               priority
             />
 
-            {/* Orbiting avatars */}
             <Image
               src="/Ellipse 5.png"
               width={44}
@@ -99,7 +90,6 @@ export default function CohortsFeaturesSection() {
             />
           </div>
 
-          {/* Right copy */}
           <div className="w-full px-2 pt-10 md:w-1/2 md:px-12 md:pt-0">
             <h3 className="mb-4 text-2xl font-bold md:text-3xl">
               Create Your Own Community{" "}
@@ -108,15 +98,14 @@ export default function CohortsFeaturesSection() {
             <p className="max-w-xl text-zinc-300">
               Launch a brand-new community in under 4 minutes!
               <br />
-              Just name it, pick your type, and you’re ready to bring people in
+              Just name it, pick your type, and you're ready to bring people in
               — no tech, no waiting.
             </p>
           </div>
         </div>
 
-        {/* Section 2: Engage Members */}
+        {/* Engage Members Section */}
         <div className="relative z-10 flex flex-col items-center gap-16 md:flex-row">
-          {/* Left copy */}
           <div className="w-full px-2 md:w-1/2 md:px-12">
             <h3 className="mb-4 text-2xl font-bold md:text-3xl">
               Engage Members{" "}
@@ -130,9 +119,7 @@ export default function CohortsFeaturesSection() {
             </p>
           </div>
 
-          {/* Right visuals */}
           <div className="relative w-full md:w-1/2">
-            {/* Laptop image */}
             <Image
               src="/Group 57.png"
               width={640}
@@ -141,7 +128,6 @@ export default function CohortsFeaturesSection() {
               className="w-[88%] rounded-xl md:w-[92%]"
             />
 
-            {/* Stats card */}
             <div className="absolute -top-6 left-6 z-20 rounded-xl bg-white px-4 py-2 text-[13px] font-semibold text-black shadow-lg shadow-black/30">
               <div className="flex gap-8">
                 <div>
@@ -161,7 +147,6 @@ export default function CohortsFeaturesSection() {
               </div>
             </div>
 
-            {/* Locked/member list card */}
             <Image
               src="/Locked.png"
               width={320}
@@ -172,8 +157,8 @@ export default function CohortsFeaturesSection() {
           </div>
         </div>
       </div>
-      {/* Section 3: Host Live Events & Gatherings */}
 
+      {/* Host Live Events Section */}
       <div className="relative z-10 mt-28 grid grid-cols-1 items-center gap-12 md:mt-32 md:grid-cols-2">
         <svg
           className="pointer-events-none absolute -left-24 -top-20 -z-10 h-[360px] w-[900px]"
@@ -208,7 +193,6 @@ export default function CohortsFeaturesSection() {
             className="absolute left-12 -top-6 z-30 w-[176px] rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
           />
 
-          {/* Calendar overlay */}
           <Image
             src="/Calendar.png"
             width={260}
@@ -217,7 +201,6 @@ export default function CohortsFeaturesSection() {
             className="absolute -top-10 left-1/2 z-30 w-[240px] -translate-x-1/2 rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
           />
 
-          {/* Video call card */}
           <Image
             src="/vc.png"
             width={360}
@@ -227,7 +210,6 @@ export default function CohortsFeaturesSection() {
           />
         </div>
 
-        {/* Copy (right) */}
         <div className="w-full px-2 md:px-10">
           <h3 className="mb-4 text-[28px] font-extrabold leading-tight md:text-[36px]">
             Host Live Events and{" "}
@@ -241,9 +223,8 @@ export default function CohortsFeaturesSection() {
         </div>
       </div>
 
-      {/* Section 4: Share Exclusive Content Securely */}
+      {/* Share Exclusive Content Section */}
       <div className="relative z-10 mt-28 grid grid-cols-1 items-center gap-12 md:mt-32 md:grid-cols-2">
-        {/* Purple ribbon backdrop */}
         <svg
           className="pointer-events-none absolute -left-24 top-[-60px] -z-10 h-[420px] w-[1400px]"
           viewBox="0 0 1400 420"
@@ -259,7 +240,6 @@ export default function CohortsFeaturesSection() {
           />
         </svg>
 
-        {/* Copy (left) */}
         <div className="w-full px-2 md:px-8">
           <h3 className="mb-4 text-[28px] font-extrabold leading-tight md:text-[36px]">
             Share Exclusive Content{" "}
@@ -271,9 +251,7 @@ export default function CohortsFeaturesSection() {
           </p>
         </div>
 
-        {/* Visuals (right) */}
         <div className="relative w-full min-h-[360px]">
-          {/* Main content card (frame3) */}
           <Image
             src="/frame3.png"
             width={560}
@@ -283,7 +261,6 @@ export default function CohortsFeaturesSection() {
             priority
           />
 
-          {/* Floating module list (Frame 4) */}
           <Image
             src="/Frame 4.png"
             width={320}
@@ -292,7 +269,6 @@ export default function CohortsFeaturesSection() {
             className="absolute -right-10 -top-10 z-20 w-[300px] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
           />
 
-          {/* Curved arrow pointing to the module list */}
           <svg
             className="absolute right-[140px] top-[130px] z-10 h-16 w-28"
             viewBox="0 0 112 64"
@@ -317,15 +293,11 @@ export default function CohortsFeaturesSection() {
         </div>
       </div>
 
-      {/* Section 5: Inspire Participation with Leaderboards */}
-      {/* Section 5: Inspire Participation with Leaderboards (matches reference) */}
-      {/* Section 5: Inspire Participation with Leaderboards (spaced evenly) */}
+      {/* Leaderboards Section */}
       <section className="relative z-10 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 items-center gap-y-12 gap-x-16 md:grid-cols-2">
-            {/* LEFT: leaderboard visuals */}
             <div className="relative flex w-full justify-center md:justify-start">
-              {/* leaderboard card */}
               <Image
                 src="/leaderboard.png"
                 width={400}
@@ -334,7 +306,6 @@ export default function CohortsFeaturesSection() {
                 className="w-[320px] md:w-[360px] rounded-2xl shadow-[0_16px_48px_rgba(0,0,0,0.45)]"
                 priority
               />
-              {/* total points pill (floating above-left) */}
               <Image
                 src="/expense.png"
                 width={150}
@@ -344,9 +315,7 @@ export default function CohortsFeaturesSection() {
               />
             </div>
 
-            {/* RIGHT: copy with purple arcs behind */}
             <div className="relative w-full max-w-xl md:pl-2">
-              {/* decorative arcs behind text */}
               <svg
                 className="pointer-events-none absolute -left-24 top-6 -z-10 h-40 w-40 md:-left-32 md:top-10"
                 viewBox="0 0 200 200"
@@ -388,9 +357,8 @@ export default function CohortsFeaturesSection() {
         </div>
       </section>
 
-      {/* Section 6: Monetise Your Community (match reference & spaced evenly) */}
+      {/* Monetise Community Section */}
       <section className="relative z-10 py-16 md:py-24">
-        {/* subtle ribbon/wave behind content (right side) */}
         <svg
           className="pointer-events-none absolute inset-x-0 top-10 -z-10 hidden h-[240px] w-full md:block"
           viewBox="0 0 1200 240"
@@ -408,7 +376,6 @@ export default function CohortsFeaturesSection() {
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 items-start gap-y-12 gap-x-16 md:grid-cols-2">
-            {/* Left copy */}
             <div className="w-full">
               <h3 className="mb-3 text-[26px] font-extrabold leading-tight md:text-[28px]">
                 Monetise Your Community,{" "}
@@ -421,9 +388,7 @@ export default function CohortsFeaturesSection() {
               </p>
             </div>
 
-            {/* Right visuals (compact stack) */}
             <div className="relative w-full">
-              {/* Main monetisation card */}
               <Image
                 src="/monetization.png"
                 width={380}
@@ -432,7 +397,6 @@ export default function CohortsFeaturesSection() {
                 className="ml-auto w-[360px] max-w-[92%] rounded-2xl shadow-[0_14px_44px_rgba(0,0,0,0.45)]"
                 priority
               />
-              {/* Analysis chart floating above-right */}
               <Image
                 src="/analysis.png"
                 width={220}
@@ -440,7 +404,6 @@ export default function CohortsFeaturesSection() {
                 alt="Analysis chart"
                 className="absolute -top-14 right-8 z-20 w-[220px] rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.4)]"
               />
-              {/* Small revenue/invoice tag at the bottom-right */}
               <Image
                 src="/invoice.png"
                 width={140}
@@ -453,7 +416,6 @@ export default function CohortsFeaturesSection() {
         </div>
       </section>
 
-      {/* Bottom fade */}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent" />
     </section>
   );
