@@ -9,7 +9,7 @@ function CreatorSection() {
             <span className="text-purple-400 underline">Cohorts</span>
           </h2>
 
-          <img src="/frame.png" alt="" />
+          <img src="https://res.cloudinary.com/dr51pu9n9/image/upload/v1753860531/Frame_hdnmzz.png" alt="" />
         </div>
       </section>
   )
