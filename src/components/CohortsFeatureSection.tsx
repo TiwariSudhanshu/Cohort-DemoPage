@@ -49,61 +49,126 @@ export default function CohortsFeaturesSection() {
         </div>
 
         {/* Create Community Section */}
-        <div className="relative z-10 mb-28 flex flex-col items-center md:mb-32 md:flex-row">
-          <div className="relative w-full md:w-1/2">
-            <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dotted border-zinc-700/60 md:block" />
+       <div className="relative z-10 mb-28 mt-30 flex flex-col items-center md:mb-40 md:flex-row">
+  {/* Background SVG */}
+  <svg 
+    className="absolute inset-0 w-full h-full -z-20" 
+    viewBox="0 0 1200 600" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Flowing curved shapes */}
+    <path 
+      d="M-100 200C200 150 400 250 600 200C800 150 1000 250 1300 200L1300 0L-100 0Z" 
+      fill="url(#gradient1)" 
+      opacity="0.3"
+    />
+    <path 
+      d="M-100 350C200 300 400 400 600 350C800 300 1000 400 1300 350L1300 150L-100 150Z" 
+      fill="url(#gradient2)" 
+      opacity="0.2"
+    />
+    <path 
+      d="M-100 500C200 450 400 550 600 500C800 450 1000 550 1300 500L1300 300L-100 300Z" 
+      fill="url(#gradient3)" 
+      opacity="0.15"
+    />
+    
+    {/* Dotted circles */}
+    <circle 
+      cx="300" 
+      cy="300" 
+      r="220" 
+      fill="none" 
+      stroke="rgba(139, 92, 246, 0.2)" 
+      strokeWidth="1" 
+      strokeDasharray="4 8"
+    />
+    <circle 
+      cx="300" 
+      cy="300" 
+      r="160" 
+      fill="none" 
+      stroke="rgba(139, 92, 246, 0.15)" 
+      strokeWidth="1" 
+      strokeDasharray="3 6"
+    />
+    
+    {/* Gradients */}
+    <defs>
+      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="rgba(139, 92, 246, 0.4)" />
+        <stop offset="50%" stopColor="rgba(168, 85, 247, 0.3)" />
+        <stop offset="100%" stopColor="rgba(139, 92, 246, 0.2)" />
+      </linearGradient>
+      <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="rgba(168, 85, 247, 0.3)" />
+        <stop offset="50%" stopColor="rgba(139, 92, 246, 0.2)" />
+        <stop offset="100%" stopColor="rgba(168, 85, 247, 0.1)" />
+      </linearGradient>
+      <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="rgba(139, 92, 246, 0.2)" />
+        <stop offset="50%" stopColor="rgba(168, 85, 247, 0.15)" />
+        <stop offset="100%" stopColor="rgba(139, 92, 246, 0.1)" />
+      </linearGradient>
+    </defs>
+  </svg>
 
-            <div className="absolute -top-6 left-[38%] z-20 hidden -translate-x-1/2 items-center gap-2 rounded-xl bg-white px-3 py-1.5 text-xs font-semibold text-black shadow-lg shadow-black/40 md:flex">
-              <span className="inline-block h-2 w-2 rounded-full bg-blue-500" />
-              <span>Create your community &amp; approve instantly</span>
-            </div>
-
-            <Image
-              src="/Content.png"
-              width={460}
-              height={460}
-              alt="Create Community Modal"
-              className="relative z-10 mx-auto w-[85%] max-w-[460px] rounded-xl"
-              priority
-            />
-
-            <Image
-              src="/Ellipse 5.png"
-              width={44}
-              height={44}
-              alt="User 1"
-              className="absolute -top-6 left-10 z-20 rounded-full border-2 border-white"
-            />
-            <Image
-              src="/Ellipse 6.png"
-              width={44}
-              height={44}
-              alt="User 2"
-              className="absolute top-14 -left-3 z-20 rounded-full border-2 border-white"
-            />
-            <Image
-              src="/Ellipse 7.png"
-              width={44}
-              height={44}
-              alt="User 3"
-              className="absolute -bottom-3 right-8 z-20 rounded-full border-2 border-white"
-            />
-          </div>
-
-          <div className="w-full px-2 pt-10 md:w-1/2 md:px-12 md:pt-0">
-            <h3 className="mb-4 text-2xl font-bold md:text-3xl">
-              Create Your Own Community{" "}
-              <span className="text-purple-500">Space!</span>
-            </h3>
-            <p className="max-w-xl text-zinc-300">
-              Launch a brand-new community in under 4 minutes!
-              <br />
-              Just name it, pick your type, and you're ready to bring people in
-              — no tech, no waiting.
-            </p>
-          </div>
-        </div>
-
+  <div className="relative w-full md:w-1/2">
+    <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dotted border-zinc-700/60 md:block" />
+    
+    <div className="absolute -top-6 left-[38%] z-20 hidden -translate-x-1/2 items-center gap-2 rounded-xl bg-white px-3 py-1.5 text-xs font-semibold text-black shadow-lg shadow-black/40 md:flex">
+      <span className="inline-block h-2 w-2 rounded-full bg-blue-500" />
+      <span>Create your community &amp; approve instantly</span>
+    </div>
+    
+    <div className="relative z-10 mx-auto w-[85%] max-w-[460px] rounded-xl bg-white p-4 shadow-lg">
+      <Image
+        src="/Content.png"
+        width={460}
+        height={460}
+        alt="Create Community Modal"
+        className="relative z-10 w-full rounded-xl"
+        priority
+      />
+    </div>
+    
+    <Image
+      src="/Ellipse 5.png"
+      width={44}
+      height={44}
+      alt="User 1"
+      className="absolute -top-6 left-10 z-20 rounded-full border-2 border-white"
+    />
+    <Image
+      src="/Ellipse 6.png"
+      width={44}
+      height={44}
+      alt="User 2"
+      className="absolute top-14 -left-3 z-20 rounded-full border-2 border-white"
+    />
+    <Image
+      src="/Ellipse 7.png"
+      width={44}
+      height={44}
+      alt="User 3"
+      className="absolute -bottom-3 right-8 z-20 rounded-full border-2 border-white"
+    />
+  </div>
+  
+  <div className="w-full px-2 pt-10 md:w-1/2 md:px-12 md:pt-0">
+    <h3 className="mb-4 text-2xl font-bold md:text-3xl">
+      Create Your Own Community{" "}
+      <span className="text-purple-500">Space!</span>
+    </h3>
+    <p className="max-w-xl text-zinc-300">
+      Launch a brand-new community in under 4 minutes!
+      <br />
+      Just name it, pick your type, and you're ready to bring people in
+      — no tech, no waiting.
+    </p>
+  </div>
+</div>
         {/* Engage Members Section */}
         <div className="relative z-10 flex flex-col items-center gap-16 md:flex-row">
           <div className="w-full px-2 md:w-1/2 md:px-12">
@@ -159,7 +224,7 @@ export default function CohortsFeaturesSection() {
       </div>
 
       {/* Host Live Events Section */}
-      <div className="relative z-10 mt-28 grid grid-cols-1 items-center gap-12 md:mt-32 md:grid-cols-2">
+      <div className="relative mx-20 z-10 mt-28 grid grid-cols-1 items-center gap-12 md:mt-32 md:grid-cols-2">
         <svg
           className="pointer-events-none absolute -left-24 -top-20 -z-10 h-[360px] w-[900px]"
           viewBox="0 0 900 360"
@@ -224,7 +289,7 @@ export default function CohortsFeaturesSection() {
       </div>
 
       {/* Share Exclusive Content Section */}
-      <div className="relative z-10 mt-28 grid grid-cols-1 items-center gap-12 md:mt-32 md:grid-cols-2">
+      <div className="relative z-10 mt-28 mx-20 grid grid-cols-1 items-center gap-12 md:mt-32 md:grid-cols-2">
         <svg
           className="pointer-events-none absolute -left-24 top-[-60px] -z-10 h-[420px] w-[1400px]"
           viewBox="0 0 1400 420"
@@ -300,18 +365,18 @@ export default function CohortsFeaturesSection() {
             <div className="relative flex w-full justify-center md:justify-start">
               <Image
                 src="/leaderboard.png"
-                width={400}
-                height={300}
+                width={480}
+                height={360}
                 alt="Leaderboard"
-                className="w-[320px] md:w-[360px] rounded-2xl shadow-[0_16px_48px_rgba(0,0,0,0.45)]"
+                className="w-[360px] md:w-[420px] rounded-2xl shadow-[0_16px_48px_rgba(0,0,0,0.45)]"
                 priority
               />
               <Image
                 src="/expense.png"
-                width={150}
-                height={72}
+                width={170}
+                height={82}
                 alt="Total points"
-                className="absolute -top-10 left-6 md:left-10 w-[148px] rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.35)]"
+                className="absolute -top-10 left-6 md:left-10 w-[168px] rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.35)]"
               />
             </div>
 
@@ -342,11 +407,11 @@ export default function CohortsFeaturesSection() {
                 />
               </svg>
 
-              <h3 className="mb-2 text-[24px] font-extrabold leading-tight text-white md:text-[28px]">
+              <h3 className="mb-2 text-[28px] font-extrabold leading-tight text-white md:text-[32px]">
                 Inspire Participation with <br className="hidden md:block" />
                 Leaderboards!
               </h3>
-              <p className="text-sm leading-relaxed text-zinc-300">
+              <p className="text-[15px] leading-relaxed text-zinc-300 md:text-base">
                 Turn your top members into ambassadors.
                 <br className="hidden md:block" />
                 Use gamification and leaderboard systems to reward activity,
@@ -357,7 +422,6 @@ export default function CohortsFeaturesSection() {
         </div>
       </section>
 
-      {/* Monetise Community Section */}
       <section className="relative z-10 py-16 md:py-24">
         <svg
           className="pointer-events-none absolute inset-x-0 top-10 -z-10 hidden h-[240px] w-full md:block"
@@ -377,11 +441,11 @@ export default function CohortsFeaturesSection() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 items-start gap-y-12 gap-x-16 md:grid-cols-2">
             <div className="w-full">
-              <h3 className="mb-3 text-[26px] font-extrabold leading-tight md:text-[28px]">
+              <h3 className="mb-3 text-[28px] font-extrabold leading-tight md:text-[32px]">
                 Monetise Your Community,{" "}
                 <span className="text-purple-500">Your Way!</span>
               </h3>
-              <p className="max-w-[520px] text-sm text-zinc-300">
+              <p className="max-w-[520px] text-[15px] text-zinc-300 md:text-base">
                 Charge for memberships, content, or events — or earn passively
                 through native ads. With Cohorts App, you choose how to monetise
                 without giving up control.
@@ -391,25 +455,25 @@ export default function CohortsFeaturesSection() {
             <div className="relative w-full">
               <Image
                 src="/monetization.png"
-                width={380}
-                height={260}
+                width={440}
+                height={300}
                 alt="Monetisation card"
-                className="ml-auto w-[360px] max-w-[92%] rounded-2xl shadow-[0_14px_44px_rgba(0,0,0,0.45)]"
+                className="ml-auto w-[400px] max-w-[95%] rounded-2xl shadow-[0_14px_44px_rgba(0,0,0,0.45)]"
                 priority
               />
               <Image
                 src="/analysis.png"
-                width={220}
-                height={140}
+                width={260}
+                height={160}
                 alt="Analysis chart"
-                className="absolute -top-14 right-8 z-20 w-[220px] rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.4)]"
+                className="absolute -top-16 right-8 z-20 w-[250px] rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.4)]"
               />
               <Image
                 src="/invoice.png"
-                width={140}
-                height={72}
+                width={160}
+                height={84}
                 alt="Revenue summary"
-                className="absolute -bottom-8 right-2 z-20 w-[140px] rounded-xl shadow-[0_10px_28px_rgba(0,0,0,0.35)]"
+                className="absolute -bottom-10 right-2 z-20 w-[160px] rounded-xl shadow-[0_10px_28px_rgba(0,0,0,0.35)]"
               />
             </div>
           </div>
