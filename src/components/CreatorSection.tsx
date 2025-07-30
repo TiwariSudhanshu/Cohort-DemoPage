@@ -2,7 +2,7 @@ import React from 'react'
 
 function CreatorSection() {
   return (
-  <section className="py-20 bg-black bg-wavy-lines">
+  <section className="py-20 bg-black bg-wavy-lines mt-[5vmax]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-12">
             Creators and Communities on{" "}

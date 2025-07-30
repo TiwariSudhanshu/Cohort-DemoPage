@@ -5,43 +5,7 @@ function HeroSection() {
         id="home"
         className="relative mt-[5vmax] min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900/20 via-black to-black overflow-hidden"
       >
-        {/* Floating Elements */}
-        <img
-          src="/connected.png"
-          className="absolute top-[5%] left-[10%] w-36 animate-float"
-        />
-        <img
-          src="/notification-31.png"
-          className="absolute top-[8%] left-[24%] w-10 animate-ping-slow"
-        />
-        <img
-          src="/heart-1009.png"
-          className="absolute top-[20%] left-[18%] w-10 animate-float"
-        />
-        <img
-          src="/profile-avatar1.png"
-          className="absolute top-[30%] left-[22%] w-12 rounded-full animate-bounce-slow"
-        />
-        <img
-          src="/idea-lightbulb.png"
-          className="absolute top-[15%] right-[10%] w-10 animate-float"
-        />
-        <img
-          src="/profile-avatar2.png"
-          className="absolute top-[28%] right-[16%] w-12 rounded-full animate-bounce"
-        />
-        <img
-          src="/notification-200.png"
-          className="absolute top-[6%] right-[18%] w-12 animate-ping-slow"
-        />
-        <img
-          src="/notification-31.png"
-          className="absolute bottom-[10%] left-[8%] w-10 animate-float"
-        />
-        <img
-          src="/rocket-icon.png"
-          className="absolute bottom-[8%] right-[6%] w-10 animate-bounce"
-        />
+     
 
         {/* Glowing Orbs */}
         <div className="absolute top-20 left-20 w-4 h-4 bg-purple-500 rounded-full glow-orb" />
@@ -51,7 +15,7 @@ function HeroSection() {
 
         {/* Content */}
         <div className="container mx-auto px-4 text-center z-10 mt-[5vmax]">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight">
             The complete community platform for{" "}
             <span className="text-purple-400">Businesses!</span>
           </h1>
