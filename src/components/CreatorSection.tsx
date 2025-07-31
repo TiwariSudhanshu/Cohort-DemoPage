@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function CreatorSection() {
   return (
@@ -20,9 +20,27 @@ function CreatorSection() {
       <div className="relative">
         {/* content sits above the bottom vector */}
         <div className="relative z-10 container mx-auto px-4 pt-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12">
-            Creators and Communities on{" "}
-            <span className="text-purple-400 underline">Cohorts</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
+            Creators{" "}
+            <span className="relative inline-block w-fit">
+              <span className="relative z-10">and Communities</span>
+              <svg
+                viewBox="0 0 300 20"
+                className="absolute left-1/2 -translate-x-1/2 bottom-[-8px] w-[300px] h-[20px] z-0"
+                preserveAspectRatio="none"
+              >
+                <line
+                  x1="0"
+                  y1="20"
+                  x2="300"
+                  y2="0"
+                  stroke="#7e22ce"
+                  strokeWidth="16"
+                  strokeLinecap="butt"
+                />
+              </svg>
+            </span>{" "}
+            on Cohorts
           </h2>
 
           <img
@@ -47,7 +65,7 @@ function CreatorSection() {
         />
       </div>
     </section>
-  )
+  );
 }
 
-export default CreatorSection
+export default CreatorSection;

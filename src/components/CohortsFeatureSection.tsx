@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function CohortsFeaturesSection() {
-   const [active, setActive] = useState<"creators" | "users">("creators");
+  const [active, setActive] = useState<"creators" | "users">("creators");
   return (
     <section className="relative overflow-hidden bg-black text-white">
       {/* Background gradients */}
@@ -27,161 +27,188 @@ export default function CohortsFeaturesSection() {
             FEATURES
           </span>
         </div>
-
-        <h2 className="mb-8 text-center text-3xl font-bold md:text-5xl">
-          What can you do on{" "}
-          <span className="relative inline-block">
-            Cohorts?
-            <span className="absolute -bottom-1 left-0 block h-1 w-full rounded-full bg-purple-500 md:-bottom-2 md:h-1.5" />
+        <h2 className="mb-8 text-center text-3xl font-bold md:text-5xl text-white">
+          What can you do on <br />
+          <span className="relative inline-block w-fit">
+            <span className="relative z-10">Cohorts?</span>
+            <svg
+              viewBox="0 0 300 20"
+              className="absolute left-1/2 -translate-x-1/2 bottom-[-6px] w-[300px] h-[16px] z-0"
+              preserveAspectRatio="none"
+            >
+              <line
+                x1="0"
+                y1="20"
+                x2="300"
+                y2="0"
+                stroke="#7e22ce"
+                strokeWidth="12"
+                strokeLinecap="butt"
+              />
+            </svg>
           </span>
         </h2>
 
-           <div className="mb-20 flex justify-center gap-3">
-      <button
-        type="button"
-        className={active === "creators" ? "rounded-full bg-purple-600 px-5 py-2 text-sm font-medium text-white shadow-lg shadow-purple-900/30 ring-1 ring-purple-500/50" : "rounded-full bg-zinc-800 px-5 py-2 text-sm font-medium text-white ring-1 ring-zinc-700"}
-        onClick={() => setActive("creators")}
-        aria-pressed={active === "creators"}
-      >
-        Creators
-      </button>
-      <button
-        type="button"
-        className={active === "users" ? "rounded-full bg-purple-600 px-5 py-2 text-sm font-medium text-white shadow-lg shadow-purple-900/30 ring-1 ring-purple-500/50" : "rounded-full bg-zinc-800 px-5 py-2 text-sm font-medium text-white ring-1 ring-zinc-700"}
-        onClick={() => setActive("users")}
-        aria-pressed={active === "users"}
-      >
-        Users
-      </button>
-    </div>
+        <div className="mb-20 flex justify-center">
+          <div className="relative flex items-center bg-gradient-to-r from-purple-700 to-purple-900 p-1 rounded-full w-[200px] h-[48px]">
+            {/* Sliding Indicator */}
+            <div
+              className={`absolute top-1 bottom-1 left-1 w-[95px] rounded-full bg-white transition-all duration-300 ${
+                active === "users" ? "translate-x-[100px]" : "translate-x-0"
+              }`}
+            />
+
+            {/* Buttons */}
+            <button
+              className={`z-10 w-[95px] h-full text-base font-medium transition-colors duration-300 ${
+                active === "creators" ? "text-black" : "text-white"
+              }`}
+              onClick={() => setActive("creators")}
+            >
+              Creators
+            </button>
+            <button
+              className={`z-10 w-[95px] h-full text-base font-medium transition-colors duration-300 ${
+                active === "users" ? "text-black" : "text-white"
+              }`}
+              onClick={() => setActive("users")}
+            >
+              Users
+            </button>
+          </div>
+        </div>
 
         {/* Create Community Section */}
-       <div className="relative z-10 mb-28 mt-30 flex flex-col items-center md:mb-40 md:flex-row">
-  {/* Background SVG */}
-  <svg 
-    className="absolute inset-0 w-full h-full -z-20" 
-    viewBox="0 0 1200 600" 
-    fill="none" 
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    {/* Flowing curved shapes */}
-    <path 
-      d="M-100 200C200 150 400 250 600 200C800 150 1000 250 1300 200L1300 0L-100 0Z" 
-      fill="url(#gradient1)" 
-      opacity="0.3"
-    />
-    <path 
-      d="M-100 350C200 300 400 400 600 350C800 300 1000 400 1300 350L1300 150L-100 150Z" 
-      fill="url(#gradient2)" 
-      opacity="0.2"
-    />
-    <path 
-      d="M-100 500C200 450 400 550 600 500C800 450 1000 550 1300 500L1300 300L-100 300Z" 
-      fill="url(#gradient3)" 
-      opacity="0.15"
-    />
-    
-    {/* Dotted circles */}
-    <circle 
-      cx="300" 
-      cy="300" 
-      r="220" 
-      fill="none" 
-      stroke="rgba(139, 92, 246, 0.2)" 
-      strokeWidth="1" 
-      strokeDasharray="4 8"
-    />
-    <circle 
-      cx="300" 
-      cy="300" 
-      r="160" 
-      fill="none" 
-      stroke="rgba(139, 92, 246, 0.15)" 
-      strokeWidth="1" 
-      strokeDasharray="3 6"
-    />
-    
-    {/* Gradients */}
-    <defs>
-      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="rgba(139, 92, 246, 0.4)" />
-        <stop offset="50%" stopColor="rgba(168, 85, 247, 0.3)" />
-        <stop offset="100%" stopColor="rgba(139, 92, 246, 0.2)" />
-      </linearGradient>
-      <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="rgba(168, 85, 247, 0.3)" />
-        <stop offset="50%" stopColor="rgba(139, 92, 246, 0.2)" />
-        <stop offset="100%" stopColor="rgba(168, 85, 247, 0.1)" />
-      </linearGradient>
-      <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="rgba(139, 92, 246, 0.2)" />
-        <stop offset="50%" stopColor="rgba(168, 85, 247, 0.15)" />
-        <stop offset="100%" stopColor="rgba(139, 92, 246, 0.1)" />
-      </linearGradient>
-    </defs>
-  </svg>
+        <div className="relative z-10 mb-28 mt-30 flex flex-col items-center md:mb-40 md:flex-row">
+          {/* Background SVG */}
+          <svg
+            className="absolute inset-0 w-full h-full -z-20"
+            viewBox="0 0 1200 600"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Flowing curved shapes */}
+            <path
+              d="M-100 200C200 150 400 250 600 200C800 150 1000 250 1300 200L1300 0L-100 0Z"
+              fill="url(#gradient1)"
+              opacity="0.3"
+            />
+            <path
+              d="M-100 350C200 300 400 400 600 350C800 300 1000 400 1300 350L1300 150L-100 150Z"
+              fill="url(#gradient2)"
+              opacity="0.2"
+            />
+            <path
+              d="M-100 500C200 450 400 550 600 500C800 450 1000 550 1300 500L1300 300L-100 300Z"
+              fill="url(#gradient3)"
+              opacity="0.15"
+            />
 
-  <div className="relative w-full md:w-1/2">
-    <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dotted border-zinc-700/60 md:block" />
-    
-    <div className="absolute -top-6 left-[38%] z-20 hidden -translate-x-1/2 items-center gap-2 rounded-xl bg-white px-3 py-1.5 text-xs font-semibold text-black shadow-lg shadow-black/40 md:flex">
-      <span className="inline-block h-2 w-2 rounded-full bg-blue-500" />
-      <span>Create your community &amp; approve instantly</span>
-    </div>
-    
-    <div className="relative z-10 mx-auto w-[85%] max-w-[460px] rounded-xl bg-white p-4 shadow-lg">
-      <Image
-        src="/Content.png"
-        width={460}
-        height={460}
-        alt="Create Community Modal"
-        className="relative z-10 w-full rounded-xl"
-        priority
-      />
-    </div>
-    
-    <Image
-      src="/Ellipse 5.png"
-      width={44}
-      height={44}
-      alt="User 1"
-      className="absolute -top-6 left-10 z-20 rounded-full border-2 border-white"
-    />
-    <Image
-      src="/Ellipse 6.png"
-      width={44}
-      height={44}
-      alt="User 2"
-      className="absolute top-14 -left-3 z-20 rounded-full border-2 border-white"
-    />
-    <Image
-      src="/Ellipse 7.png"
-      width={44}
-      height={44}
-      alt="User 3"
-      className="absolute -bottom-3 right-8 z-20 rounded-full border-2 border-white"
-    />
-  </div>
-  
-  <div className="w-full px-2 pt-10 md:w-1/2 md:px-12 md:pt-0">
-    <h3 className="mb-4 text-2xl font-bold md:text-3xl">
-      Create Your Own Community{" "}
-      <span className="text-purple-500">Space!</span>
-    </h3>
-    <p className="max-w-xl text-zinc-300">
-      Launch a brand-new community in under 4 minutes!
-      <br />
-      Just name it, pick your type, and you're ready to bring people in
-      — no tech, no waiting.
-    </p>
-  </div>
-</div>
+            {/* Dotted circles */}
+            <circle
+              cx="300"
+              cy="300"
+              r="220"
+              fill="none"
+              stroke="rgba(139, 92, 246, 0.2)"
+              strokeWidth="1"
+              strokeDasharray="4 8"
+            />
+            <circle
+              cx="300"
+              cy="300"
+              r="160"
+              fill="none"
+              stroke="rgba(139, 92, 246, 0.15)"
+              strokeWidth="1"
+              strokeDasharray="3 6"
+            />
+
+            {/* Gradients */}
+            <defs>
+              <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(139, 92, 246, 0.4)" />
+                <stop offset="50%" stopColor="rgba(168, 85, 247, 0.3)" />
+                <stop offset="100%" stopColor="rgba(139, 92, 246, 0.2)" />
+              </linearGradient>
+              <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(168, 85, 247, 0.3)" />
+                <stop offset="50%" stopColor="rgba(139, 92, 246, 0.2)" />
+                <stop offset="100%" stopColor="rgba(168, 85, 247, 0.1)" />
+              </linearGradient>
+              <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(139, 92, 246, 0.2)" />
+                <stop offset="50%" stopColor="rgba(168, 85, 247, 0.15)" />
+                <stop offset="100%" stopColor="rgba(139, 92, 246, 0.1)" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <div className="relative w-full md:w-1/2">
+            <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dotted border-zinc-700/60 md:block" />
+
+            <div className="absolute -top-6 left-[38%] z-20 hidden -translate-x-1/2 items-center gap-2 rounded-xl bg-white px-3 py-1.5 text-xs font-semibold text-black shadow-lg shadow-black/40 md:flex">
+              <span className="inline-block h-2 w-2 rounded-full bg-blue-500" />
+              <span>Create your community &amp; approve instantly</span>
+            </div>
+
+            <div className="relative z-10 mx-auto w-[85%] max-w-[460px] rounded-xl bg-white p-4 shadow-lg">
+              <Image
+                src="/Content.png"
+                width={460}
+                height={460}
+                alt="Create Community Modal"
+                className="relative z-10 w-full rounded-xl"
+                priority
+              />
+            </div>
+
+            <Image
+              src="/Ellipse 5.png"
+              width={44}
+              height={44}
+              alt="User 1"
+              className="absolute -top-6 left-10 z-20 rounded-full border-2 border-white"
+            />
+            <Image
+              src="/Ellipse 6.png"
+              width={44}
+              height={44}
+              alt="User 2"
+              className="absolute top-14 -left-3 z-20 rounded-full border-2 border-white"
+            />
+            <Image
+              src="/Ellipse 7.png"
+              width={44}
+              height={44}
+              alt="User 3"
+              className="absolute -bottom-3 right-8 z-20 rounded-full border-2 border-white"
+            />
+          </div>
+
+          <div className="w-full px-2 pt-10 md:w-1/2 md:px-12 md:pt-0">
+            <h3 className="mb-4 text-2xl font-bold md:text-3xl">
+              Create Your Own{" "}
+              <span className="bg-gradient-to-r from-white via-purple-500 to-purple-500 bg-clip-text text-transparent">
+                Community Space!
+              </span>
+            </h3>
+            <p className="max-w-xl text-zinc-300">
+              Launch a brand-new community in under 4 minutes!
+              <br />
+              Just name it, pick your type, and you're ready to bring people in
+              — no tech, no waiting.
+            </p>
+          </div>
+        </div>
         {/* Engage Members Section */}
         <div className="relative z-10 flex flex-col items-center gap-16 md:flex-row">
           <div className="w-full px-2 md:w-1/2 md:px-12">
             <h3 className="mb-4 text-2xl font-bold md:text-3xl">
               Engage Members{" "}
-              <span className="text-purple-500">Effortlessly!</span>
+              <span className="bg-gradient-to-r from-white via-purple-500 to-purple-500 bg-clip-text text-transparent">
+                Effortlessly!
+              </span>
             </h3>
             <p className="max-w-xl text-zinc-300">
               Start real conversations, not just content drops!
@@ -262,7 +289,7 @@ export default function CohortsFeaturesSection() {
             width={180}
             height={72}
             alt="Schedule a call"
-            className="absolute left-12 -top-6 z-30 w-[176px] rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+            className="absolute left-12 -top-6 z-30 w-[176px] rounded-xl "
           />
 
           <Image
@@ -270,7 +297,7 @@ export default function CohortsFeaturesSection() {
             width={260}
             height={300}
             alt="Calendar"
-            className="absolute -top-10 left-1/2 z-30 w-[240px] -translate-x-1/2 rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
+            className="absolute -top-[10vmax] right-[-12vmax] z-30 w-[240px] -translate-x-1/2 rounded-xl "
           />
 
           <Image
@@ -278,14 +305,16 @@ export default function CohortsFeaturesSection() {
             width={360}
             height={240}
             alt="Video call UI"
-            className="absolute -bottom-16 -left-10 z-30 w-[340px] rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
+            className="absolute -bottom-16 -left-10 z-30 w-[340px] rounded-xl ]"
           />
         </div>
 
         <div className="w-full px-2 md:px-10">
           <h3 className="mb-4 text-[28px] font-extrabold leading-tight md:text-[36px]">
             Host Live Events and{" "}
-            <span className="text-purple-500">Gatherings!</span>
+            <span className="bg-gradient-to-r from-white via-purple-500 to-purple-500 bg-clip-text text-transparent">
+              Gatherings!
+            </span>
           </h3>
           <p className="max-w-[560px] text-zinc-300">
             Run live sessions, Q&amp;As, and community calls – directly inside
@@ -296,7 +325,7 @@ export default function CohortsFeaturesSection() {
       </div>
 
       {/* Share Exclusive Content Section */}
-      <div className="relative z-10 mt-28 mx-20 grid grid-cols-1 items-center gap-12 md:mt-32 md:grid-cols-2">
+      <div className="relative z-10 mt-60 mx-20 grid grid-cols-1 items-center gap-12 md:mt-32 md:grid-cols-2">
         <svg
           className="pointer-events-none absolute -left-24 top-[-60px] -z-10 h-[420px] w-[1400px]"
           viewBox="0 0 1400 420"
@@ -315,7 +344,9 @@ export default function CohortsFeaturesSection() {
         <div className="w-full px-2 md:px-8">
           <h3 className="mb-4 text-[28px] font-extrabold leading-tight md:text-[36px]">
             Share Exclusive Content{" "}
-            <span className="text-purple-500">Securely!</span>
+            <span className="bg-gradient-to-r from-white via-purple-500 to-purple-500 bg-clip-text text-transparent">
+              Securely!
+            </span>
           </h3>
           <p className="max-w-[560px] text-zinc-300">
             Upload and organise your premium content – Videos &amp; courses –
@@ -326,10 +357,10 @@ export default function CohortsFeaturesSection() {
         <div className="relative w-full min-h-[360px]">
           <Image
             src="/frame3.png"
-            width={560}
-            height={340}
+            width={320}
+            height={380}
             alt="Course content card with progress"
-            className="absolute right-8 bottom-0 w-[520px] max-w-[92%] rounded-2xl shadow-[0_16px_50px_rgba(0,0,0,0.45)]"
+            className="absolute right-50 bottom-0 w-[400px] max-w-[92%] rounded-2xl shadow-[0_16px_50px_rgba(0,0,0,0.45)]"
             priority
           />
 
@@ -338,7 +369,7 @@ export default function CohortsFeaturesSection() {
             width={320}
             height={380}
             alt="Module 1 list"
-            className="absolute -right-10 -top-10 z-20 w-[300px] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
+            className="absolute -right-10 -top-30 z-20 w-[300px] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
           />
 
           <svg
@@ -383,7 +414,7 @@ export default function CohortsFeaturesSection() {
                 width={170}
                 height={82}
                 alt="Total points"
-                className="absolute -top-10 left-6 md:left-10 w-[168px] rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.35)]"
+                className="absolute -top-15 right-10 w-[168px] rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.35)]"
               />
             </div>
 
@@ -465,7 +496,7 @@ export default function CohortsFeaturesSection() {
                 width={440}
                 height={300}
                 alt="Monetisation card"
-                className="ml-auto w-[400px] max-w-[95%] rounded-2xl shadow-[0_14px_44px_rgba(0,0,0,0.45)]"
+                className="ml-auto w-[400px] max-w-[95%] rounded-2xl "
                 priority
               />
               <Image
@@ -473,14 +504,14 @@ export default function CohortsFeaturesSection() {
                 width={260}
                 height={160}
                 alt="Analysis chart"
-                className="absolute -top-16 right-8 z-20 w-[250px] rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.4)]"
+                className="absolute -top-16 left-100 z-20 w-[250px] rounded-xl "
               />
               <Image
                 src="/invoice.png"
                 width={160}
                 height={84}
                 alt="Revenue summary"
-                className="absolute -bottom-10 right-2 z-20 w-[160px] rounded-xl shadow-[0_10px_28px_rgba(0,0,0,0.35)]"
+                className="absolute -bottom-20 right-0 z-20 w-[160px] rounded-xl"
               />
             </div>
           </div>
