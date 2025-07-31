@@ -203,7 +203,7 @@ export default function CohortsFeaturesSection() {
         </div>
         {/* Engage Members Section */}
         <div className="relative z-10 flex flex-col items-center gap-16 md:flex-row">
-          <div className="w-full px-2 md:w-1/2 md:px-12">
+          <div className="w-full px-2 order-2 md:order-1 md:w-1/2 md:px-12">
             <h3 className="mb-4 text-2xl font-bold md:text-3xl">
               Engage Members{" "}
               <span className="bg-gradient-to-r from-white via-purple-500 to-purple-500 bg-clip-text text-transparent">
@@ -218,7 +218,7 @@ export default function CohortsFeaturesSection() {
             </p>
           </div>
 
-          <div className="relative w-full md:w-1/2">
+          <div className="relative w-full order-1 md:order-2 md:w-1/2">
             <Image
               src="/Group 57.png"
               width={640}
@@ -258,9 +258,9 @@ export default function CohortsFeaturesSection() {
       </div>
 
       {/* Host Live Events Section */}
-      <div className="relative mx-20 z-10 mt-28 grid grid-cols-1 items-center gap-12 md:mt-32 md:grid-cols-2">
+      <div className="relative px-4 md:mx-20 z-10 mt-28 grid grid-cols-1 items-center gap-12 md:mt-32 md:grid-cols-2">
         <svg
-          className="pointer-events-none absolute -left-24 -top-20 -z-10 h-[360px] w-[900px]"
+          className="pointer-events-none absolute -left-24 -top-20 -z-10 h-[360px] w-[900px] hidden md:block"
           viewBox="0 0 900 360"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -274,7 +274,7 @@ export default function CohortsFeaturesSection() {
           />
         </svg>
 
-        <div className="relative w-full md:pl-6">
+        <div className="relative w-full md:pl-6 order-2 md:order-1">
           <Image
             src="/img.png"
             width={640}
@@ -289,7 +289,7 @@ export default function CohortsFeaturesSection() {
             width={180}
             height={72}
             alt="Schedule a call"
-            className="absolute left-12 -top-6 z-30 w-[176px] rounded-xl "
+            className="absolute left-4 -top-6 md:left-12 z-30 w-[120px] md:w-[176px] rounded-xl"
           />
 
           <Image
@@ -297,7 +297,7 @@ export default function CohortsFeaturesSection() {
             width={260}
             height={300}
             alt="Calendar"
-            className="absolute -top-[10vmax] right-[-12vmax] z-30 w-[240px] -translate-x-1/2 rounded-xl "
+            className="absolute -top-8 right-0 md:-top-[10vmax] md:right-[-12vmax] z-30 w-[160px] md:w-[240px] -translate-x-1/2 rounded-xl"
           />
 
           <Image
@@ -305,11 +305,11 @@ export default function CohortsFeaturesSection() {
             width={360}
             height={240}
             alt="Video call UI"
-            className="absolute -bottom-16 -left-10 z-30 w-[340px] rounded-xl ]"
+            className="absolute -bottom-8 -left-2 md:-bottom-16 md:-left-10 z-30 w-[220px] md:w-[340px] rounded-xl"
           />
         </div>
 
-        <div className="w-full px-2 md:px-10">
+        <div className="w-full px-2 order-1 md:order-2 md:px-10">
           <h3 className="mb-4 text-[28px] font-extrabold leading-tight md:text-[36px]">
             Host Live Events and{" "}
             <span className="bg-gradient-to-r from-white via-purple-500 to-purple-500 bg-clip-text text-transparent">
@@ -325,9 +325,9 @@ export default function CohortsFeaturesSection() {
       </div>
 
       {/* Share Exclusive Content Section */}
-      <div className="relative z-10 mt-60 mx-20 grid grid-cols-1 items-center gap-12 md:mt-32 md:grid-cols-2">
+      <div className="relative z-10 mt-40 md:mt-60 px-4 md:mx-20 grid grid-cols-1 items-center gap-12 md:grid-cols-2">
         <svg
-          className="pointer-events-none absolute -left-24 top-[-60px] -z-10 h-[420px] w-[1400px]"
+          className="pointer-events-none absolute -left-24 top-[-60px] -z-10 h-[420px] w-[1400px] hidden md:block"
           viewBox="0 0 1400 420"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -360,7 +360,7 @@ export default function CohortsFeaturesSection() {
             width={320}
             height={380}
             alt="Course content card with progress"
-            className="absolute right-50 bottom-0 w-[400px] max-w-[92%] rounded-2xl shadow-[0_16px_50px_rgba(0,0,0,0.45)]"
+            className="absolute right-4 md:right-50 bottom-0 w-[280px] md:w-[400px] max-w-[92%] rounded-2xl shadow-[0_16px_50px_rgba(0,0,0,0.45)]"
             priority
           />
 
@@ -369,11 +369,11 @@ export default function CohortsFeaturesSection() {
             width={320}
             height={380}
             alt="Module 1 list"
-            className="absolute -right-10 -top-30 z-20 w-[300px] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
+            className="absolute -right-2 -top-16 md:-right-10 md:-top-30 z-20 w-[200px] md:w-[300px] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
           />
 
           <svg
-            className="absolute right-[140px] top-[130px] z-10 h-16 w-28"
+            className="absolute right-[100px] top-[100px] md:right-[140px] md:top-[130px] z-10 h-12 w-20 md:h-16 md:w-28"
             viewBox="0 0 112 64"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -400,13 +400,13 @@ export default function CohortsFeaturesSection() {
       <section className="relative z-10 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 items-center gap-y-12 gap-x-16 md:grid-cols-2">
-            <div className="relative flex w-full justify-center md:justify-start">
+            <div className="relative flex w-full justify-center md:justify-start order-2 md:order-1">
               <Image
                 src="/leaderboard.png"
                 width={480}
                 height={360}
                 alt="Leaderboard"
-                className="w-[360px] md:w-[420px] rounded-2xl shadow-[0_16px_48px_rgba(0,0,0,0.45)]"
+                className="w-[300px] md:w-[360px] lg:w-[420px] rounded-2xl shadow-[0_16px_48px_rgba(0,0,0,0.45)]"
                 priority
               />
               <Image
@@ -414,13 +414,13 @@ export default function CohortsFeaturesSection() {
                 width={170}
                 height={82}
                 alt="Total points"
-                className="absolute -top-15 right-10 w-[168px] rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.35)]"
+                className="absolute -top-8 right-4 md:-top-15 md:right-10 w-[140px] md:w-[168px] rounded-xl shadow-[0_12px_36px_rgba(0,0,0,0.35)]"
               />
             </div>
 
-            <div className="relative w-full max-w-xl md:pl-2">
+            <div className="relative w-full max-w-xl order-1 md:order-2 md:pl-2">
               <svg
-                className="pointer-events-none absolute -left-24 top-6 -z-10 h-40 w-40 md:-left-32 md:top-10"
+                className="pointer-events-none absolute -left-24 top-6 -z-10 h-40 w-40 md:-left-32 md:top-10 hidden md:block"
                 viewBox="0 0 200 200"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -478,7 +478,7 @@ export default function CohortsFeaturesSection() {
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 items-start gap-y-12 gap-x-16 md:grid-cols-2">
-            <div className="w-full">
+            <div className="w-full order-2 md:order-1">
               <h3 className="mb-3 text-[28px] font-extrabold leading-tight md:text-[32px]">
                 Monetise Your Community,{" "}
                 <span className="text-purple-500">Your Way!</span>
@@ -490,13 +490,13 @@ export default function CohortsFeaturesSection() {
               </p>
             </div>
 
-            <div className="relative w-full">
+            <div className="relative w-full order-1 md:order-2">
               <Image
                 src="/monetization.png"
                 width={440}
                 height={300}
                 alt="Monetisation card"
-                className="ml-auto w-[400px] max-w-[95%] rounded-2xl "
+                className="ml-auto w-[320px] md:w-[400px] max-w-[95%] rounded-2xl"
                 priority
               />
               <Image
@@ -504,14 +504,14 @@ export default function CohortsFeaturesSection() {
                 width={260}
                 height={160}
                 alt="Analysis chart"
-                className="absolute -top-16 left-100 z-20 w-[250px] rounded-xl "
+                className="absolute -top-8 left-4 md:-top-16 md:left-100 z-20 w-[180px] md:w-[250px] rounded-xl"
               />
               <Image
                 src="/invoice.png"
                 width={160}
                 height={84}
                 alt="Revenue summary"
-                className="absolute -bottom-20 right-0 z-20 w-[160px] rounded-xl"
+                className="absolute -bottom-12 right-0 md:-bottom-20 z-20 w-[120px] md:w-[160px] rounded-xl"
               />
             </div>
           </div>

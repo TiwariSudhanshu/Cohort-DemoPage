@@ -15,9 +15,14 @@ function CreatorSection() {
           pointer-events-none
         "
       />
-
+  
       {/* CONTENT + SLIGHT UNDERLAP SETUP */}
       <div className="relative">
+         <div className="text-center">
+          <span className="inline-block bg-white text-purple-600 text-xs font-semibold px-4 py-1 rounded-full tracking-widest uppercase">
+            Change Makers
+          </span>
+        </div>
         {/* content sits above the bottom vector */}
         <div className="relative z-10 container mx-auto px-4 pt-10 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
