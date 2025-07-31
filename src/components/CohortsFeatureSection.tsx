@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function CohortsFeaturesSection() {
+   const [active, setActive] = useState<"creators" | "users">("creators");
   return (
     <section className="relative overflow-hidden bg-black text-white">
       {/* Background gradients */}
@@ -33,20 +36,24 @@ export default function CohortsFeaturesSection() {
           </span>
         </h2>
 
-        <div className="mb-20 flex justify-center gap-3">
-          <button
-            type="button"
-            className="rounded-full bg-purple-600 px-5 py-2 text-sm font-medium text-white shadow-lg shadow-purple-900/30 ring-1 ring-purple-500/50"
-          >
-            Creators
-          </button>
-          <button
-            type="button"
-            className="rounded-full bg-zinc-800 px-5 py-2 text-sm font-medium text-white ring-1 ring-zinc-700"
-          >
-            Users
-          </button>
-        </div>
+           <div className="mb-20 flex justify-center gap-3">
+      <button
+        type="button"
+        className={active === "creators" ? "rounded-full bg-purple-600 px-5 py-2 text-sm font-medium text-white shadow-lg shadow-purple-900/30 ring-1 ring-purple-500/50" : "rounded-full bg-zinc-800 px-5 py-2 text-sm font-medium text-white ring-1 ring-zinc-700"}
+        onClick={() => setActive("creators")}
+        aria-pressed={active === "creators"}
+      >
+        Creators
+      </button>
+      <button
+        type="button"
+        className={active === "users" ? "rounded-full bg-purple-600 px-5 py-2 text-sm font-medium text-white shadow-lg shadow-purple-900/30 ring-1 ring-purple-500/50" : "rounded-full bg-zinc-800 px-5 py-2 text-sm font-medium text-white ring-1 ring-zinc-700"}
+        onClick={() => setActive("users")}
+        aria-pressed={active === "users"}
+      >
+        Users
+      </button>
+    </div>
 
         {/* Create Community Section */}
        <div className="relative z-10 mb-28 mt-30 flex flex-col items-center md:mb-40 md:flex-row">
