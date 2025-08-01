@@ -51,7 +51,7 @@ function CreatorSection() {
           <img
             src="https://res.cloudinary.com/dr51pu9n9/image/upload/v1753860531/Frame_hdnmzz.png"
             alt="Creators grid"
-            className="mx-auto"
+            className="w-[100%"
           />
         </div>
 

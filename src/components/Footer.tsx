@@ -1,4 +1,4 @@
-import { Mail, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Mail, Facebook, Twitter, Linkedin, Youtube, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -25,16 +25,16 @@ export default function Footer() {
           </p>
 
           <div className="flex space-x-4 text-white/60 mb-6">
-            <a href="#" className="hover:text-white transition-colors">
-              <Twitter className="w-5 h-5" />
+            <a href="https://www.instagram.com/cohortsapp/" className="hover:text-white transition-colors">
+              <Instagram className="w-5 h-5" />
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="www.cohorts.in" className="hover:text-white transition-colors">
               <Facebook className="w-5 h-5" />
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/company/104463309/admin/dashboard/" className="hover:text-white transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="https://www.youtube.com/@Cohortsapp/videos" className="hover:text-white transition-colors">
               <Youtube className="w-5 h-5" />
             </a>
           </div>
