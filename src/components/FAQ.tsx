@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Underline from "./ui/Underline";
 
 export default function FAQ() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -84,20 +85,9 @@ export default function FAQ() {
       <h2 className="text-center text-3xl md:text-4xl font-bold mb-16 text-white">
         Frequently{" "}
         <span className="relative inline-block">
-          <span className="relative z-10">Asked Questions</span>
-          <svg
-            viewBox="0 0 300 30"
-            className="absolute left-0 bottom-[-8px] w-full h-6 z-0"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M5 20 C60 35, 240 0, 295 20"
-              stroke="#7e22ce"
-              strokeWidth="12"
-              fill="transparent"
-              strokeLinecap="round"
-            />
-          </svg>
+          <span className="relative z-10">
+            <Underline>Asked Questions</Underline>
+          </span>
         </span>
       </h2>
 

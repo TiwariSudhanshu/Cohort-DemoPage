@@ -1,30 +1,21 @@
 "use client";
 import Image from "next/image";
+import Underline from "./ui/Underline";
 
 function EmpoweringCommunities() {
   return (
     <section className="py-24 bg-black bg-wavy-pattern relative overflow-hidden">
       <div className="container mx-auto px-4 text-center">
         {/* Heading */}
-        <h2 className="text-3xl md:text-2xl font-bold text-white mb-16">
+         <div className="text-center">
+          <span className="inline-block bg-white text-purple-600 text-xs font-semibold px-4 py-1 rounded-full tracking-widest uppercase">
+            Built for this
+          </span>
+        </div>
+        <h2 className="text-5xl mt-7 md:text-5xl leading-tight font-bold text-white mb-16">
           Empowering Every Kind of <br />
           <span className="relative inline-block">
-            <span className="relative z-10">Community!</span>
-            <svg
-              className="pointer-events-none absolute inset-x-0 -bottom-1 h-[0.5em] w-full"
-              viewBox="0 0 100 10"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-              style={{ filter: "drop-shadow(0 2px 6px rgba(139,92,246,0.6))" }}
-            >
-              <path
-                d="M2 5 C 30 2, 70 8, 98 5"
-                stroke="#8b5cf6"
-                strokeWidth="6"
-                strokeLinecap="round"
-                fill="none"
-              />
-            </svg>
+            <span className="relative z-10"><Underline>Community!</Underline></span>
           </span>
         </h2>
 

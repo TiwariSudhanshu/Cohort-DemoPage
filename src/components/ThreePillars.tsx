@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Underline from "./ui/Underline";
 
 function ThreePillars() {
   const TABS = ["Build", "Engage", "Monetize"] as const;
@@ -72,23 +73,13 @@ function ThreePillars() {
           </span>
         </div>
 
-        <h2 className="text-center text-4xl md:text-5xl font-bold mb-8 text-white">
+        <h2 className="text-center text-4xl md:text-5xl font-bold mb-10 text-white">
           The 3 Pillars of Powerful {" "}
           <span className="relative inline-block">
-            <span className="relative z-10">Communities</span>
-            <svg
-              viewBox="0 0 300 30"
-              className="absolute left-0 bottom-[-5px] w-full h-6 z-0"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M5 20 C60 35, 240 0, 295 20"
-                stroke="#7e22ce"
-                strokeWidth="12"
-                fill="transparent"
-                strokeLinecap="round"
-              />
-            </svg>
+            <span className="relative z-10">
+             <Underline> Communities</Underline>
+              </span>
+        
           </span>
         </h2>
 

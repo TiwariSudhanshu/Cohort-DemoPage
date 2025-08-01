@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import Underline from "./ui/Underline";
 
 export default function CohortsFeaturesSection() {
   const [active, setActive] = useState<"creators" | "users">("creators");
@@ -100,22 +101,9 @@ export default function CohortsFeaturesSection() {
         <h2 className="mb-8 text-center text-3xl font-bold md:text-5xl text-white">
           What can you do on <br />
           <span className="relative inline-block w-fit">
-            <span className="relative z-10">Cohorts?</span>
-            <svg
-              viewBox="0 0 300 20"
-              className="absolute left-1/2 -translate-x-1/2 bottom-[-6px] w-[300px] h-[16px] z-0"
-              preserveAspectRatio="none"
-            >
-              <line
-                x1="0"
-                y1="20"
-                x2="300"
-                y2="0"
-                stroke="#7e22ce"
-                strokeWidth="12"
-                strokeLinecap="butt"
-              />
-            </svg>
+            <span className="relative z-10">
+              <Underline>Cohorts?</Underline>
+            </span>
           </span>
         </h2>
 

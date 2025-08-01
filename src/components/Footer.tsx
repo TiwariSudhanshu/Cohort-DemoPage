@@ -80,23 +80,9 @@ export default function Footer() {
 
         {/* Resources & Contact */}
         <div>
-          <h4 className="font-semibold text-sm text-white mb-4">Resources</h4>
+          <h4 className="font-semibold text-sm text-white mb-4">Contact us</h4>
           <ul className="space-y-2 text-sm text-white/80 mb-4">
-            <li>
-              <a href="#" className="hover:text-white">
-                Community
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Terms of Service
-              </a>
-            </li>
+            
           </ul>
 
           <div className="text-sm space-y-1 text-white/80 mb-3">
