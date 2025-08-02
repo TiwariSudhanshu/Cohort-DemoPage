@@ -91,7 +91,7 @@ const playerRef = useRef<YT.Player | null>(null);
                 onClick={() => setIsPlaying(true)}
               >
                 <img
-                  src="/hero-feed.png"
+                  src="/thumbnail.jpg"
                   alt="Custom thumbnail"
                   className="w-full h-full object-cover"
                 />
