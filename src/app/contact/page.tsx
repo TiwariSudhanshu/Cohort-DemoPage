@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroBG from "@/components/ui/heroBG";
 import Underline from "@/components/ui/Underline";
+import Image from "next/image";
 
 export default function Contact() {
   const contacts = [
@@ -72,10 +73,13 @@ export default function Contact() {
       <section className="relative py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-center gap-10 bg-gradient-to-b from-black via-[#271A34] to-black">
         {/* Left Image */}
         <div className="w-full md:w-1/2 flex justify-center">
-          <img
+          <Image
             src="/contact.png"
             alt="Contact Visual"
-            className="max-w-[500px] w-full h-auto"
+            width={800}
+            height={0}
+            className="w-full h-auto max-w-[800px]"
+            priority
           />
         </div>
 
