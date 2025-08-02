@@ -175,23 +175,23 @@ function ThreePillars() {
         <Image
           src="/Frame 5.png"
           alt="frame"
-          width={1200}
-          height={600}
+          width={1620}
+          height={800}
           className="w-auto h-auto"
           loading="lazy"
-          sizes="80vw"
+          sizes="100vw"
         />
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center px-5">
         <Image
           src="/frame2.png"
           alt="frame2"
-          width={1200}
-          height={600}
-          className="w-auto h-auto"
           loading="lazy"
-          sizes="80vw"
+          width={1620}
+          height={800}
+          className="w-full h-auto rounded-3xl"
+          sizes="100vw"
         />
       </div>
     </>
