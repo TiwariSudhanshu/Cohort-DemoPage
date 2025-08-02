@@ -4,7 +4,7 @@ import Underline from "./ui/Underline";
 
 function EmpoweringCommunities() {
   return (
-    <section className="py-24 bg-black bg-wavy-pattern relative overflow-hidden">
+    <section className="py-15 bg-black bg-wavy-pattern relative overflow-hidden">
       <div className="container mx-auto px-4 text-center">
         {/* Heading */}
          <div className="text-center">

@@ -1,11 +1,22 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import HeroBG from "./ui/heroBG";
+// import heroBG from "./ui/heroBG";
 
 const words = ["Creators", "Businesses", "Community Builders"];
+declare global {
+  interface Window {
+    onYouTubeIframeAPIReady: () => void;
+  }
+}
+
 
 export default function HeroSection() {
-   const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
   const [flip, setFlip] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isVideoStarted, setIsVideoStarted] = useState(false);
+const playerRef = useRef<YT.Player | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,6 +29,29 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    if (isPlaying && window.YT && window.YT.Player) {
+      createYouTubePlayer();
+    } else if (isPlaying) {
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      window.onYouTubeIframeAPIReady = createYouTubePlayer;
+      document.body.appendChild(tag);
+    }
+  }, [isPlaying]);
+
+  function createYouTubePlayer() {
+    playerRef.current = new window.YT.Player("yt-player", {
+      videoId: "cv5kxeUg5Jc",
+      playerVars: { autoplay: 1, rel: 0 },
+      events: {
+        onStateChange: (event) => {
+          if (event.data === 1) setIsVideoStarted(true);
+        },
+      },
+    });
+  }
+
   return (
     <section
       id="home"
@@ -26,23 +60,11 @@ export default function HeroSection() {
         background: "linear-gradient(to bottom, #000000, #271A34, #000000)",
       }}
     >
-      <img src="/hero1.png" alt="" className="absolute top-35 left-62 scale-[0.8] z-20 hidden sm:block" />
-      <img src="/hero2.png" alt="" className="absolute top-66 left-20 scale-[0.8] z-20 hidden sm:block" />
-      <img src="/hero3.png" alt="" className="absolute left-20 scale-[0.8] z-20 hidden sm:block" />
-      <img src="/hero4.png" alt="" className="absolute right-[-10] top-40 scale-[0.8] z-10 hidden sm:block" />
-      <img src="/hero5.png" alt="" className="absolute left-80 top-75 scale-[0.8] z-10 hidden sm:block" />
-      <img src="/hero5.png" alt="" className="absolute right-70 top-80 scale-[0.8] z-10 hidden sm:block" />
-      <img src="/hero6.png" alt="" className="absolute top-0 right-80 scale-[0.8] z-10 hidden sm:block" />
-      <img src="/hero7.png" alt="" className="absolute top-0 left-80 scale-[0.8] z-10 hidden sm:block" />
-      <img src="/hero8.png" alt="" className="absolute top-10 left-10 scale-[0.8] z-10 hidden sm:block" />
-
-      <div className="absolute top-30 left-68 w-4 h-4 bg-purple-500 rounded-full glow-orb hidden sm:block" />
-      <div className="absolute top-18 right-23 w-6 h-6 bg-purple-400 rounded-full glow-orb hidden sm:block" />
-      <div className="absolute bottom-67 left-90 w-3 h-3 bg-purple-400 rounded-full glow-orb hidden sm:block" />
-      <div className="absolute bottom-56 right-84 w-5 h-5 bg-purple-500 rounded-full glow-orb hidden sm:block" />
+      {/* Decorative images */}
+     <HeroBG/>
 
       <div className="container mx-auto px-4 text-center z-30 mt-[5vmax]">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl md:ml-40 font-bold mb-6 leading-tight flex flex-wrap justify-center items-center gap-2">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl md:ml-40 font-bold mb-6 leading-tight flex flex-wrap justify-center items-center gap-2">
           The complete community platform for{" "}
           <span className="relative inline-block w-[15ch] h-[1.2em] text-purple-400">
             <span
@@ -60,26 +82,48 @@ export default function HeroSection() {
           Build, Engage, and Monetize Your Community - All in One Platform.
         </p>
 
-
-        <img
-          src="https://res.cloudinary.com/dr51pu9n9/image/upload/v1753959874/Vector_1_hdo2ye.png"
-          alt="vector"
-          className="absolute left-0 top-30 z-5 hidden sm:block"
-        />
-
+     
         <div className="relative mx-auto mb-10 z-30">
-          <img
-            src="/hero-feed.png"
-            alt="App Feed UI"
-            className="w-full max-w-2xl mx-auto shadow-2xl rounded-lg"
-          />
+          <div className="w-full max-w-2xl mx-auto aspect-video shadow-2xl rounded-lg overflow-hidden relative">
+            {/* Thumbnail with play button */}
+            {!isPlaying && (
+              <div
+                className="absolute inset-0 transition-opacity duration-300 opacity-100"
+                onClick={() => setIsPlaying(true)}
+              >
+                <img
+                  src="/hero-feed.png"
+                  alt="Custom thumbnail"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 cursor-pointer">
+                  <svg
+                    className="w-20 h-20 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 84 84"
+                  >
+                    <circle cx="42" cy="42" r="42" opacity="0.5" />
+                    <polygon points="33,27 60,42 33,57" fill="white" />
+                  </svg>
+                </div>
+              </div>
+            )}
+
+            {/* Loader while waiting for video to start */}
+            {isPlaying && !isVideoStarted && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black">
+                <div className="w-12 h-12 border-4 border-purple-400 border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
+
+            {/* YouTube iframe */}
+            <div className="w-full h-full">
+              {isPlaying && <div id="yt-player" className="w-full h-full" />}
+            </div>
+          </div>
         </div>
 
-        <img
-          src="https://res.cloudinary.com/dr51pu9n9/image/upload/v1753959949/Vector_2_einqjg.png"
-          alt="vector"
-          className="absolute right-18 top-20 z-5 hidden sm:block"
-        />
+      
 
         <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 shadow-lg">
           Get Started for Free

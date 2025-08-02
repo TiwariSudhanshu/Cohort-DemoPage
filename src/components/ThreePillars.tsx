@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+
 import Underline from "./ui/Underline";
 
 function ThreePillars() {
@@ -74,12 +76,11 @@ function ThreePillars() {
         </div>
 
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-10 text-white">
-          The 3 Pillars of Powerful {" "}
+          The 3 Pillars of Powerful{" "}
           <span className="relative inline-block">
             <span className="relative z-10">
-             <Underline> Communities</Underline>
-              </span>
-        
+              <Underline> Communities</Underline>
+            </span>
           </span>
         </h2>
 
@@ -107,7 +108,10 @@ function ThreePillars() {
 
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto px-4 min-h-[200px]">
           {contentMap[active].map(({ title, text }) => (
-            <div key={title} className="border-l border-white/20 pl-4 space-y-2">
+            <div
+              key={title}
+              className="border-l border-white/20 pl-4 space-y-2"
+            >
               <h3 className="text-lg font-semibold">{title}</h3>
               <p className="text-gray-300 text-sm">{text}</p>
             </div>
@@ -116,34 +120,47 @@ function ThreePillars() {
       </section>
 
       <div className="relative w-full h-[600px]">
-        <img
+        <Image
           src="/Vector.png"
           alt="bg"
-          className="w-full h-full object-cover brightness-50"
+          fill
+          className="object-cover brightness-50"
+          sizes="100vw"
+          priority
         />
-        <img
+        <Image
           src="/pillar1.png"
           alt="pillar1"
+          width={260}
+          height={300}
           className="absolute top-10 left-[20%] w-[260px] h-auto"
         />
-        <img
+        <Image
           src="/pillar2.png"
           alt="pillar2"
+          width={260}
+          height={300}
           className="absolute top-10 right-[20%] w-[260px] h-auto"
         />
-        <img
+        <Image
           src="/pillar3.png"
           alt="pillar3"
+          width={220}
+          height={280}
           className="absolute bottom-10 left-[15%] w-[220px] h-auto"
         />
-        <img
+        <Image
           src="/pillar4.png"
           alt="pillar4"
+          width={200}
+          height={260}
           className="absolute bottom-12 right-[15%] w-[200px] h-auto"
         />
-        <img
+        <Image
           src="/pillar-center.png"
           alt="pillar-center"
+          width={500}
+          height={600}
           className="absolute w-[500px] top-40 left-1/2 -translate-x-1/2"
         />
       </div>
@@ -154,12 +171,28 @@ function ThreePillars() {
         </button>
       </div>
 
-      <div className="flex justify-center ">
-        <img src="/Frame 5.png" alt="frame " />
+      <div className="flex justify-center">
+        <Image
+          src="/Frame 5.png"
+          alt="frame"
+          width={1200}
+          height={600}
+          className="w-auto h-auto"
+          loading="lazy"
+          sizes="80vw"
+        />
       </div>
 
       <div className="flex justify-center">
-        <img src="/frame2.png" alt="frame" />
+        <Image
+          src="/frame2.png"
+          alt="frame2"
+          width={1200}
+          height={600}
+          className="w-auto h-auto"
+          loading="lazy"
+          sizes="80vw"
+        />
       </div>
     </>
   );

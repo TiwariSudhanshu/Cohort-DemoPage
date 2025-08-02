@@ -124,7 +124,7 @@ export default function CohortsFeaturesSection() {
               Creators
             </button>
             <button
-              className={`z-10 w-[95px] h-full text-base font-medium transition-colors duration-300 ${
+              className={`z-10 w-[95px] h-full flex items-center justify-center text-base pl-3 font-medium transition-colors duration-300 ${
                 active === "users" ? "text-black" : "text-white"
               }`}
               onClick={() => setActive("users")}
@@ -148,7 +148,7 @@ export default function CohortsFeaturesSection() {
                 height={900}
                 alt={`${section.title} ${section.highlight}`}
                 className="relative z-10 "
-                priority
+                priority={index === 0}
               />
             </div>
 
