@@ -16,8 +16,8 @@ function HeroBG() {
 
       <div className="absolute top-30 left-68 w-4 h-4 bg-purple-500 rounded-full glow-orb hidden sm:block" />
       <div className="absolute top-18 right-23 w-6 h-6 bg-purple-400 rounded-full glow-orb hidden sm:block" />
-      <div className="absolute bottom-67 left-90 w-3 h-3 bg-purple-400 rounded-full glow-orb hidden sm:block" />
-      <div className="absolute bottom-56 right-84 w-5 h-5 bg-purple-500 rounded-full glow-orb hidden sm:block" />
+      <div className="absolute bottom-47 left-88 w-3 h-3 bg-purple-400 rounded-full glow-orb hidden sm:block" />
+      <div className="absolute bottom-38 right-84 w-5 h-5 bg-purple-500 rounded-full glow-orb hidden sm:block" />
          <img
           src="https://res.cloudinary.com/dr51pu9n9/image/upload/v1753959874/Vector_1_hdo2ye.png"
           alt="vector"

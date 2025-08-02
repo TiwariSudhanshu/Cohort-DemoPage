@@ -14,7 +14,7 @@ function Header() {
             Home
           </a>
           <a
-            href="#about"
+            href="/about"
             className="text-white hover:text-purple-400 transition-colors"
           >
             About Us

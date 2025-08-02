@@ -17,10 +17,10 @@ export default function Terms() {
       >
         <HeroBG />
 
-        <div className="container mx-auto px-4 text-center z-30">
+        <div className="container mx-auto px-4 text-center z-30 mt-[-10vmax]">
           <h1 className="text-3xl md:text-[44px] font-semibold text-white mb-6">
             Terms and Conditions
-          </h1>
+          </h1>  
 
           <a
             href="mailto:support@cohortsapp.com"

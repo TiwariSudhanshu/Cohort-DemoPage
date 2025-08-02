@@ -43,7 +43,7 @@ export default function Contact() {
         {/* Decorative background (dots, orbits, etc.) */}
         <HeroBG />
 
-        <div className="container mx-auto px-4 text-center z-30 mt-[5vmax]">
+        <div className="container mx-auto px-4 text-center z-30 mt-[-5vmax]">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
             Got a question? Reach out to us!
           </h1>
