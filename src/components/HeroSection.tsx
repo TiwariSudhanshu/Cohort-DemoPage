@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import HeroBG from "./ui/heroBG";
-// import heroBG from "./ui/heroBG";
 
 const words = ["Creators", "Businesses", "Community Builders"];
 declare global {

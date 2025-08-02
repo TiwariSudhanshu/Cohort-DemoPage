@@ -20,7 +20,7 @@ function Header() {
             About Us
           </a>
           <a
-            href="#contact"
+            href="/contact"
             className="text-white hover:text-purple-400 transition-colors"
           >
             Contact Us
