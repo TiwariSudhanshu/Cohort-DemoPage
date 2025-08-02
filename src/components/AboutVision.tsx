@@ -8,7 +8,7 @@ export default function AboutVision() {
     <section className="relative pt-20 bg-black text-white overflow-hidden">
       {/* Decorative Top Vector */}
       <Image
-        src="/vector.png"
+        src="/Vector.png"
         alt="Decorative Vector"
         width={1920}
         height={200}

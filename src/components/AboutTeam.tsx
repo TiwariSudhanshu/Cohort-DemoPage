@@ -32,7 +32,7 @@ export default function AboutTeam() {
         </div>
       </div>
       <Image
-        src="/vector.png"
+        src="/Vector.png"
         alt="Decorative Vector"
         width={1920}
         height={200}

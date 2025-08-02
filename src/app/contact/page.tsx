@@ -27,50 +27,52 @@ export default function Contact() {
       title: "Chat to our Team",
       description: "Speak to our friendly team",
       detail: "Chat Now →",
-      link: "#", // Replace with actual chat link
+      link: "#",
     },
   ];
+
   return (
     <div>
       <Header />
       <section
         id="contact"
-        className="relative mt-[6vmax] pt-[1.5vmax] min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative mt-[6vmax] pt-[1.5vmax] min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6"
         style={{
           background: "linear-gradient(to bottom, #000000, #271A34, #000000)",
         }}
       >
-        {/* Decorative background (dots, orbits, etc.) */}
         <HeroBG />
 
-        <div className="container mx-auto px-4 text-center z-30 mt-[-5vmax]">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
+        <div className="container mx-auto text-center z-30 mt-[-5vmax]">
+          <h1 className="text-xl sm:text-2xl md:text-4xl font-bold mb-4 leading-snug text-white">
             Got a question? Reach out to us!
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 max-w-md sm:max-w-2xl mx-auto">
             We're always here for creators, community builders, and changemakers
             like you.
           </p>
           <a
             href="mailto:support@cohortsapp.com"
-            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 shadow-lg inline-block"
+            className="bg-purple-600 hover:bg-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition duration-300 shadow-lg inline-block"
           >
             Write to us!
           </a>
         </div>
       </section>
-      <section>
+
+      <section className="bg-black px-4 sm:px-0">
         <div className="text-center">
-          <span className="inline-block bg-white text-purple-600 text-xs font-semibold px-4 py-1 mb-7 rounded-full tracking-widest uppercase">
+          <span className="inline-block bg-white text-purple-600 text-xs font-semibold px-4 py-1 mb-6 sm:mb-7 rounded-full tracking-widest uppercase">
             Contact Us
           </span>
         </div>
-        <h2 className="mb-8 text-center text-3xl font-bold md:text-5xl text-white">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-5xl font-bold text-white">
           <Underline>Get In Touch</Underline>
-          <span className="relative inline-block w-fit ml-3">with us</span>
+          <span className="relative inline-block w-fit ml-2 sm:ml-3">with us</span>
         </h2>
       </section>
-      <section className="relative py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-center gap-10 bg-gradient-to-b from-black via-[#271A34] to-black">
+
+      <section className="relative py-16 px-4 sm:px-6 md:px-16 flex flex-col md:flex-row items-center justify-center gap-10 bg-gradient-to-b from-black via-[#271A34] to-black">
         {/* Left Image */}
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
@@ -86,7 +88,7 @@ export default function Contact() {
         {/* Right Form */}
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="w-full md:w-1/2 max-w-xl bg-black/30 backdrop-blur-sm p-8 rounded-xl space-y-6"
+          className="w-full md:w-1/2 max-w-xl bg-black/30 backdrop-blur-sm p-6 sm:p-8 rounded-xl space-y-6"
         >
           <div>
             <label className="block text-white font-semibold mb-1">
@@ -162,7 +164,8 @@ export default function Contact() {
           </button>
         </form>
       </section>
-      <section className="py-16 px-6 bg-black">
+
+      <section className="py-12 px-4 sm:px-6 bg-black">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {contacts.map((item, idx) => (
             <a
