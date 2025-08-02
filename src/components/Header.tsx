@@ -8,7 +8,7 @@ function Header() {
 
         <nav className="hidden md:flex items-center space-x-8">
           <a
-            href="#home"
+            href="/"
             className="text-white hover:text-purple-400 transition-colors"
           >
             Home
