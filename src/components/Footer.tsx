@@ -88,15 +88,12 @@ export default function Footer() {
           <div className="text-sm space-y-1 text-white/80 mb-3">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <a href="mailto:info@cohortsapp.com" className="hover:text-white">
-                info@cohortsapp.com
+              <a href="mailto:support@cohorts.in" className="hover:text-white">
+                support@cohorts.in
               </a>
             </div>
           </div>
 
-          <button className="mt-3 w-[201px] h-[56px] bg-gradient-to-r from-[#7816C9] to-[#25063F] text-white text-sm font-medium rounded-full transition-all hover:opacity-90">
-            Help Center
-          </button>
         </div>
       </div>
 
@@ -104,10 +101,10 @@ export default function Footer() {
       <div className="border-t border-gray-800 mt-10 py-6 px-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
         <p>© 2025 – OYM LABS PRIVATE LIMITED, ALL RIGHTS RESERVED.</p>
         <div className="flex space-x-4 mt-4 md:mt-0">
-          <a href="#" className="hover:text-white">
+          <a href="/terms" className="hover:text-white">
             Terms & Conditions
           </a>
-          <a href="#" className="hover:text-white">
+          <a href="/policies" className="hover:text-white">
             Privacy Policy
           </a>
         </div>
