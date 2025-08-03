@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 
 const ImageGallerySection = () => {
@@ -58,12 +59,12 @@ const ImageGallerySection = () => {
               </div>
 
               <div className="w-80 h-96 relative rounded-lg overflow-hidden">
-                <Image src="/Creators/img13.png" alt="Creator 13" fill className="object-cover" />
+                <Image src="https://res.cloudinary.com/dr51pu9n9/image/upload/v1754221598/img12_jn6nv7.png" alt="Creator 13" fill className="object-cover" />
               </div>
 
               <div className="flex flex-col gap-2">
                 <div className="w-64 h-44 relative rounded-lg overflow-hidden">
-                  <Image src="/Creators/img12.jpg" alt="Creator 12" fill className="object-cover" />
+                  <Image src="https://res.cloudinary.com/dr51pu9n9/image/upload/v1754221596/img13_hriukw.jpg" alt="Creator 12" fill className="object-cover" />
                 </div>
                 <div className="w-64 h-48 relative rounded-lg overflow-hidden">
                   <Image src="/Creators/img14.png" alt="Creator 14" fill className="object-cover" />
