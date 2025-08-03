@@ -45,7 +45,7 @@ function CreatorSection() {
        
 
     {/*  */}
-    <img src="/container.png" alt="container" />
+    <img src="/Container.png" alt="container" />
     <CreatorsGallery/>
 
         
