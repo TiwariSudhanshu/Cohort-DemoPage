@@ -110,11 +110,10 @@ export default function CohortsFeaturesSection() {
         <div className="mb-20 flex justify-center">
           <div className="relative flex items-center bg-gradient-to-r from-purple-700 to-purple-900 p-1 rounded-full w-[200px] h-[48px]">
             <div
-              className={`absolute top-1 bottom-1 left-1 w-[95px] rounded-full bg-white transition-all duration-300 ${
+              className={`absolute top-1 bottom-1 left-1 w-[90px] rounded-full bg-white transition-all duration-300 ${
                 active === "users" ? "translate-x-[100px]" : "translate-x-0"
               }`}
             />
-
             <button
               className={`z-10 w-[95px] h-full text-base font-medium transition-colors duration-300 ${
                 active === "creators" ? "text-black" : "text-white"
@@ -124,7 +123,7 @@ export default function CohortsFeaturesSection() {
               Creators
             </button>
             <button
-              className={`z-10 w-[95px] h-full flex items-center justify-center text-base pl-3 font-medium transition-colors duration-300 ${
+              className={`z-10 w-[90px] h-full flex items-center justify-center text-base pl-3 font-medium transition-colors duration-300 ${
                 active === "users" ? "text-black" : "text-white"
               }`}
               onClick={() => setActive("users")}
@@ -137,22 +136,11 @@ export default function CohortsFeaturesSection() {
         {currentContent.sections.map((section, index) => (
           <div
             key={index}
-            className={`relative z-10 mb-28 mt-20 flex flex-col items-center gap-16 md:mb-20 ${
+            className={`relative z-10 mb-28 mt-20 flex flex-col-reverse items-center gap-16 md:mb-20 ${
               index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
             }`}
           >
-            <div className="relative w-full md:w-1/2">
-              <Image
-                src={`/content${index + 1}.png`}
-                width={900}
-                height={900}
-                alt={`${section.title} ${section.highlight}`}
-                className="relative z-10 "
-                priority={index === 0}
-              />
-            </div>
-
-            <div className="w-full px-2 pt-10 md:w-1/2 md:px-12 md:pt-0">
+            <div className="w-full px-2 pt-10 md:w-1/2 md:px-12 md:pt-0 order-2 md:order-1">
               <h3 className="mb-4 text-2xl font-bold md:text-3xl">
                 {section.title}{" "}
                 <span className="bg-gradient-to-r from-white via-purple-500 to-purple-500 bg-clip-text text-transparent">
@@ -163,17 +151,24 @@ export default function CohortsFeaturesSection() {
                 {section.description.split("\n").map((line, lineIndex) => (
                   <span key={lineIndex}>
                     {line}
-                    {lineIndex < section.description.split("\n").length - 1 && (
-                      <br />
-                    )}
+                    {lineIndex < section.description.split("\n").length - 1 && <br />}
                   </span>
                 ))}
               </p>
             </div>
+            <div className="relative w-full md:w-1/2 order-1 md:order-2">
+              <Image
+                src={`/${active === "creators" ? "content" : "user"}${index + 1}.png`}
+                width={900}
+                height={900}
+                alt={`${section.title} ${section.highlight}`}
+                className="relative z-10"
+                priority={index === 0}
+              />
+            </div>
           </div>
         ))}
       </div>
-
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent" />
     </section>
   );
