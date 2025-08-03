@@ -18,7 +18,7 @@ export default function Contact() {
     {
       icon: "/contact-icon-2.png",
       title: "Mail Us",
-      description: "We’re here to help",
+      description: "We're here to help",
       detail: "support@cohortsapp.com",
       link: "mailto:support@cohortsapp.com",
     },
@@ -42,14 +42,12 @@ export default function Contact() {
         }}
       >
         <HeroBG />
-
         <div className="container mx-auto text-center z-30 mt-[-5vmax]">
           <h1 className="text-xl sm:text-2xl md:text-4xl font-bold mb-4 leading-snug text-white">
             Got a question? Reach out to us!
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 max-w-md sm:max-w-2xl mx-auto">
-            We're always here for creators, community builders, and changemakers
-            like you.
+            We're always here for creators, community builders, and changemakers like you.
           </p>
           <a
             href="mailto:support@cohortsapp.com"
@@ -73,27 +71,25 @@ export default function Contact() {
       </section>
 
       <section className="relative py-16 px-4 sm:px-6 md:px-16 flex flex-col md:flex-row items-center justify-center gap-10 bg-gradient-to-b from-black via-[#271A34] to-black">
-        {/* Left Image */}
-        <div className="w-full md:w-1/2 flex justify-center">
+        {/* Image - Left on desktop, Bottom on mobile */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start order-2 md:order-1">
           <Image
             src="/contact.png"
             alt="Contact Visual"
-            width={800}
+            width={900}
             height={0}
             className="w-full h-auto max-w-[800px]"
             priority
           />
         </div>
 
-        {/* Right Form */}
+        {/* Form - Right on desktop, Top on mobile */}
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="w-full md:w-1/2 max-w-xl bg-black/30 backdrop-blur-sm p-6 sm:p-8 rounded-xl space-y-6"
+          className="w-full md:w-1/2 max-w-xl bg-black/30 backdrop-blur-sm p-6 sm:p-8 rounded-xl space-y-6 order-1 md:order-2"
         >
           <div>
-            <label className="block text-white font-semibold mb-1">
-              Full Name
-            </label>
+            <label className="block text-white font-semibold mb-1">Full Name</label>
             <div className="flex items-center bg-[#1A1A1A] px-4 py-3 rounded-lg">
               <img src="/name.png" alt="Name Icon" className="w-5 h-5 mr-3" />
               <input
@@ -107,11 +103,7 @@ export default function Contact() {
           <div>
             <label className="block text-white font-semibold mb-1">Email</label>
             <div className="flex items-center bg-[#1A1A1A] px-4 py-3 rounded-lg">
-              <img
-                src="/message.png"
-                alt="Email Icon"
-                className="w-5 h-4 mr-3"
-              />
+              <img src="/message.png" alt="Email Icon" className="w-5 h-4 mr-3" />
               <input
                 type="email"
                 placeholder="Email"
@@ -121,15 +113,9 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-white font-semibold mb-1">
-              Phone Number
-            </label>
+            <label className="block text-white font-semibold mb-1">Phone Number</label>
             <div className="flex items-center bg-[#1A1A1A] px-4 py-3 rounded-lg">
-              <img
-                src="/phone.png"
-                alt="Phone Icon"
-                className="w-6 h-6 mr-3 ml-[-3px]"
-              />
+              <img src="/phone.png" alt="Phone Icon" className="w-6 h-6 mr-3 ml-[-3px]" />
               <input
                 type="tel"
                 placeholder="Phone Number"
@@ -139,15 +125,9 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-white font-semibold mb-1">
-              Message
-            </label>
+            <label className="block text-white font-semibold mb-1">Message</label>
             <div className="flex items-start bg-[#1A1A1A] px-4 py-3 rounded-lg">
-              <img
-                src="/message.png"
-                alt="Message Icon"
-                className="w-5 h-4 mr-3 mt-1"
-              />
+              <img src="/message.png" alt="Message Icon" className="w-5 h-4 mr-3 mt-1" />
               <textarea
                 rows={4}
                 placeholder="Message"
@@ -181,9 +161,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <h3 className="text-white text-lg font-semibold">
-                  {item.title}
-                </h3>
+                <h3 className="text-white text-lg font-semibold">{item.title}</h3>
                 <p className="text-gray-400 text-sm mt-1">{item.description}</p>
                 <p className="text-white mt-2 font-semibold">{item.detail}</p>
               </div>
@@ -191,6 +169,7 @@ export default function Contact() {
           ))}
         </div>
       </section>
+
       <Footer />
     </div>
   );
