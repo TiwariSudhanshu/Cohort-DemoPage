@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from 'next/image';
 
 const ImageGallerySection = () => {
@@ -81,6 +81,20 @@ const ImageGallerySection = () => {
                 </div>
                 <div className="w-48 h-48 relative rounded-lg overflow-hidden">
                   <Image src="/Creators/img17.png" alt="Creator 17" fill className="object-cover" />
+                </div>
+              </div>
+
+              <div className="flex gap-2 h-96">
+                <div className="flex flex-col w-48 gap-2">
+                  <div className="w-48 h-48 relative rounded-lg overflow-hidden">
+                    <Image src="/Creators/img18.jpg" alt="Creator 18" fill className="object-cover" />
+                  </div>
+                  <div className="w-48 h-48 relative rounded-lg overflow-hidden">
+                    <Image src="/Creators/img19.jpg" alt="Creator 19" fill className="object-cover" />
+                  </div>
+                </div>
+                <div className="w-62 h-96 relative rounded-lg overflow-hidden">
+                  <Image src="/Creators/img20.jpg" alt="Creator 20" fill className="object-cover" />
                 </div>
               </div>
             </div>

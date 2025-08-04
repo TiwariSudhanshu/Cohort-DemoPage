@@ -18,16 +18,18 @@ export default function AboutTeam() {
             <Underline> Builders of Cohorts App </Underline>
           </h2>
 
-          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 justify-center  items-center max-w-4xl mx-auto sm:ml-[15vmax] px-4">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-x-12 px-4 max-w-6xl mx-auto">
             <ProfileCard
               imageSrc="/builder1.png"
               name="Abdul Mateen Shariff"
               position="Co-Founder & CEO"
+              linkedinUrl="https://www.linkedin.com/in/mateen-shariff/"
             />
             <ProfileCard
               imageSrc="/builder2.png"
               name="Mohammed Yasser"
               position="Co-Founder & CMO"
+              linkedinUrl="https://www.linkedin.com/in/mohammed-yasser-0983a2171/"
             />
           </div>
         </div>
@@ -54,6 +56,7 @@ export default function AboutTeam() {
               imageSrc="/backer.png"
               name="Mr. Nitin Chamarahally"
               position="Tech Advisor & Early Supporter"
+              linkedinUrl="https://www.linkedin.com/in/nitin-chamarahally-330b39211/"
             />
           </div>
         </div>

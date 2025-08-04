@@ -4,9 +4,10 @@ interface ProfileCardProps {
   imageSrc: string;
   name: string;
   position: string;
+  linkedinUrl: string;
 }
 
-export default function ProfileCard({ imageSrc, name, position }: ProfileCardProps) {
+export default function ProfileCard({ imageSrc, name, position, linkedinUrl }: ProfileCardProps) {
   return (
     <div
       className="
@@ -29,7 +30,18 @@ export default function ProfileCard({ imageSrc, name, position }: ProfileCardPro
         />
       </div>
       <div className="flex flex-col justify-center items-center px-4 py-4 flex-1 w-full">
-        <h4 className="text-lg font-semibold text-white mb-1">{name}</h4>
+        <div className="flex items-center gap-2 mb-1">
+          <h4 className="text-lg font-semibold text-white">{name}</h4>
+          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/LinkedIn.png"
+              alt="LinkedIn"
+              width={16}
+              height={16}
+              className="hover:opacity-80"
+            />
+          </a>
+        </div>
         <p className="text-sm text-gray-400">{position}</p>
       </div>
     </div>
