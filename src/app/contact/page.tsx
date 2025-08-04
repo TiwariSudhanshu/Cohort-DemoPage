@@ -10,9 +10,9 @@ export default function Contact() {
   const contacts = [
     {
       icon: "/contact-icon-1.png",
-      title: "Call Us",
-      description: "Call our team Mon–Fri from 8am to 10pm",
-      detail: "+91 7892921796",
+      title: "Schedule a call",
+      description: "Schedule a call with our team",
+      detail: "Schedule Now →",
       link: "tel:+917892921796",
     },
     {
