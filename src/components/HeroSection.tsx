@@ -63,23 +63,25 @@ const playerRef = useRef<YT.Player | null>(null);
      <HeroBG/>
 
       <div className="container mx-auto px-4 text-center z-30 mt-[5vmax]">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl md:ml-40 font-bold mb-6 leading-tight flex flex-wrap justify-center items-center gap-2">
-          The complete community platform for{" "}
-          <span className="relative inline-block w-[15ch] h-[1.2em] text-purple-400">
-            <span
-              className={`absolute left-0 top-0 transition-transform duration-300 ease-in-out transform origin-bottom ${
-                flip ? "rotate-x-180 opacity-0" : "rotate-x-0 opacity-100"
-              }`}
-              style={{ backfaceVisibility: "hidden" }}
-            >
-              {words[index]}
-            </span>
-          </span>
-        </h1>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight text-center">
+  The complete community platform for
+  <br />
+  <span className="inline-block mt-2 text-purple-400 relative w-full h-[1.2em]">
+    <span
+      className={`absolute left-1/2 -translate-x-1/2 transition-transform duration-300 ease-in-out transform origin-bottom ${
+        flip ? "rotate-x-180 opacity-0" : "rotate-x-0 opacity-100"
+      }`}
+      style={{ backfaceVisibility: "hidden" }}
+    >
+      {words[index]}
+    </span>
+  </span>
+</h1>
 
-        <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-          Build, Engage, and Monetize Your Community - All in One Platform.
-        </p>
+<p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto text-center">
+  Build, Engage, and Monetize Your Community — All in One Platform.
+</p>
+
 
      
         <div className="relative mx-auto mb-10 z-30">
