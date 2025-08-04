@@ -73,7 +73,7 @@ export default function FAQ() {
 ];
 
   return (
-    <section className="py-24 bg-black text-white mt-[5vmax]">
+    <section className="pb-20 sm:py-24 bg-black text-white sm:mt-[5vmax] ">
       {/* Top Badge */}
       <div className="text-center mb-6">
         <span className="inline-block bg-white text-purple-600 text-xs font-semibold px-4 py-1 rounded-full tracking-widest uppercase">

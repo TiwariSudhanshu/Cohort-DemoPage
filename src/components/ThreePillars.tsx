@@ -9,48 +9,61 @@ function ThreePillars() {
   const [active, setActive] = useState<(typeof TABS)[number]>("Build");
 
   const contentMap = {
-    Build: [
-      {
-        title: "Powerful Website Builder",
-        text: "Create your own web3 community website effortlessly with our intuitive website builder."
-      },
-      {
-        title: "Customizable Templates",
-        text: "Choose from a variety of professionally designed templates tailored for different community needs."
-      },
-      {
-        title: "No Code Needed",
-        text: "Build and manage your community without writing a single line of code."
-      }
-    ],
-    Engage: [
-      {
-        title: "Community Dashboard",
-        text: "Track member activity, engagement, and growth all in one place."
-      },
-      {
-        title: "Event Management",
-        text: "Organize and promote events, manage RSVPs, and keep your community active."
-      },
-      {
-        title: "Discussion Forums",
-        text: "Foster meaningful conversations with integrated forums and chat features."
-      }
-    ],
-    Monetize: [
-      {
-        title: "NFT Memberships",
-        text: "Offer exclusive NFT-based memberships and unlock premium content for holders."
-      },
-      {
-        title: "Token Gating",
-        text: "Restrict access to certain areas or content based on token holdings."
-      },
-      {
-        title: "Monetize Engagement",
-        text: "Reward community members for their contributions and participation."
-      }
-    ]
+  Build: [
+  {
+    title: "4-Minute Launch Flow!",
+    text: "Start your own branded community space in just a few clicks. No clutter, no friction."
+  },
+  {
+    title: "Private Communities!",
+    text: "Limit access to select members, teams, or internal circles – perfect for exclusivity."
+  },
+  {
+    title: "Multi-Format Content Hosting!",
+    text: "Host videos, PDFs, modules, and discussions in one seamless place."
+  },
+  {
+    title: "Free or Paid Access!",
+    text: "Decide how your community lives: open to all or gated behind membership."
+  }
+],
+Engage: [
+  {
+    title: "Gamified Engagement with CHT Coins",
+    text: "Members earn CHT Coins by showing up, contributing, or completing streaks - driving consistent interaction and retention."
+  },
+  {
+    title: "Host Events",
+    text: "Plan and schedule events directly through your community calendar - so every member stays in sync and shows up."
+  },
+  {
+    title: "Integrated 1-Click Calls",
+    text: "No Zoom links or external platforms. Run live sessions, AMAs, or cohort calls directly inside your community."
+  },
+  {
+    title: "Video-First Content",
+    text: "Drop exclusive videos or course content for your community - all viewable inside the app, with no third-party links."
+  }
+],
+Monetize: [
+  {
+    title: "Community Ads",
+    text: "Once eligible, brands can run ads inside your community. You control what runs, and you get paid."
+  },
+  {
+    title: "Paid Communities",
+    text: "Charge for access with flexible pricing - one-time or recurring."
+  },
+  {
+    title: "Paid Content or Courses",
+    text: "Sell pre-recorded content securely - no leaks, no third-party tools."
+  },
+  {
+    title: "Paid Events & Webinars",
+    text: "Host and monetize live sessions directly inside the app."
+  }
+]
+
   };
 
   return (
@@ -108,7 +121,6 @@ function ThreePillars() {
           fill
           className="object-cover brightness-50"
           sizes="100vw"
-          priority
         />
         <Image
           src="/pillar1.png"
@@ -129,21 +141,21 @@ function ThreePillars() {
           alt="pillar3"
           width={220}
           height={280}
-          className="absolute bottom-12 left-[25%] sm:left-[33%] w-[90px] sm:w-[160px] md:w-[220px] h-auto"
+          className="absolute bottom-40 sm:bottom-12 left-[10%] sm:left-[10%] w-[90px] sm:w-[160px] md:w-[220px] h-auto"
         />
         <Image
-          src="/Frame5.png"
-          alt="frame5"
+          src="/frame6.png"
+          alt="frame6"
           width={500}
           height={500}
-          className="absolute top-[25%] left-1/2 -translate-x-1/2 w-[250px] sm:w-[400px] md:w-[500px] h-auto"
+          className="absolute top-[19%] left-1/2 -translate-x-1/2 w-[250px] sm:w-[400px] md:w-[600px] h-auto"
         />
         <Image
           src="/frame2.png"
           alt="frame2"
           width={300}
           height={300}
-          className="absolute bottom-[8%] right-[8%] w-[140px] sm:w-[200px] md:w-[300px] h-auto"
+          className="absolute bottom-[30%] sm:bottom-[8%]  right-[8%] w-[200px] sm:w-[300px] md:w-[500px] h-auto"
         />
       </div>
     </>
