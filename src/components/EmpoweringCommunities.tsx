@@ -25,7 +25,7 @@ function EmpoweringCommunities() {
           <div className="md:col-span-2 bg-gradient-to-br from-[#2B0A3D] to-[#1E0030] rounded-2xl p-6 md:p-7 md:py-12 text-left shadow-lg text-white ring-1 ring-white/10">
             <div className="flex flex-col items-start">
               <Image
-                src="/com.png"
+                src="/community-icon.png"
                 alt="Community OS"
                 width={32}
                 height={32}
@@ -54,7 +54,7 @@ function EmpoweringCommunities() {
                 className="mb-3 h-8 w-8 object-contain"
                 aria-hidden="true"
               />
-              <div className="text-black text-lg md:text-xl pt-8 font-semibold leading-tight tracking-tight">
+              <div className="text-black text-lg md:text-xl pt-3 font-semibold leading-tight tracking-tight">
                 Monetisation
               </div>
               <p className="text-gray-700 mt-2 text-xs md:text-sm leading-snug font-sora tracking-wide">

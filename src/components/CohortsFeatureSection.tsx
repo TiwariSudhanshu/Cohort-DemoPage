@@ -4,7 +4,7 @@ import { useState } from "react";
 import Underline from "./ui/Underline";
 
 export default function CohortsFeaturesSection() {
-  const [active, setActive] = useState<"creators" | "users">("creators");
+  const [active, setActive] = useState<"creators" | "members">("creators");
 
   const creatorContent = {
     sections: [
@@ -12,7 +12,7 @@ export default function CohortsFeaturesSection() {
         title: "Create Your Own",
         highlight: "Community Space!",
         description:
-          "Launch a brand-new community in under 4 minutes!\nJust name it, pick your type, and you're ready to bring people in — no tech, no waiting.",
+          "Launch a brand-new community in under 4 minutes!\nJust name it, pick your type, and you're ready to bring people in  no tech, no waiting.",
       },
       {
         title: "Engage Members",
@@ -42,7 +42,7 @@ export default function CohortsFeaturesSection() {
         title: "Monetise Your Community,",
         highlight: "Your Way!",
         description:
-          "Charge for memberships, content, or events — or earn passively through native ads. With Cohorts App, you choose how to monetise without giving up control.",
+          "Charge for memberships, content, or events or earn passively through native ads. With Cohorts App, you choose how to monetise without giving up control.",
       },
     ],
   };
@@ -111,7 +111,7 @@ export default function CohortsFeaturesSection() {
           <div className="relative flex items-center bg-gradient-to-r from-purple-700 to-purple-900 p-1 rounded-full w-[200px] h-[48px]">
             <div
               className={`absolute top-1 bottom-1 left-1 w-[90px] rounded-full bg-white transition-all duration-300 ${
-                active === "users" ? "translate-x-[100px]" : "translate-x-0"
+                active === "members" ? "translate-x-[100px]" : "translate-x-0"
               }`}
             />
             <button
@@ -124,11 +124,11 @@ export default function CohortsFeaturesSection() {
             </button>
             <button
               className={`z-10 w-[90px] h-full flex items-center justify-center text-base pl-3 font-medium transition-colors duration-300 ${
-                active === "users" ? "text-black" : "text-white"
+                active === "members" ? "text-black" : "text-white"
               }`}
-              onClick={() => setActive("users")}
+              onClick={() => setActive("members")}
             >
-              Users
+              Members
             </button>
           </div>
         </div>

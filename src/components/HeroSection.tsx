@@ -9,13 +9,12 @@ declare global {
   }
 }
 
-
 export default function HeroSection() {
   const [index, setIndex] = useState(0);
   const [flip, setFlip] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isVideoStarted, setIsVideoStarted] = useState(false);
-const playerRef = useRef<YT.Player | null>(null);
+  const playerRef = useRef<YT.Player | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -60,30 +59,28 @@ const playerRef = useRef<YT.Player | null>(null);
       }}
     >
       {/* Decorative images */}
-     <HeroBG/>
+      <HeroBG />
 
       <div className="container mx-auto px-4 text-center z-30 mt-[5vmax]">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight text-center">
-  The complete community platform for
-  <br />
-  <span className="inline-block mt-2 text-purple-400 relative w-full h-[1.2em]">
-    <span
-      className={`absolute left-1/2 -translate-x-1/2 transition-transform duration-300 ease-in-out transform origin-bottom ${
-        flip ? "rotate-x-180 opacity-0" : "rotate-x-0 opacity-100"
-      }`}
-      style={{ backfaceVisibility: "hidden" }}
-    >
-      {words[index]}
-    </span>
-  </span>
-</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight text-center">
+          The complete community platform for
+          <br />
+          <span className="inline-block mt-2 text-purple-400 relative w-full h-[1.2em]">
+            <span
+              className={`absolute left-1/2 -translate-x-1/2 transition-transform duration-300 ease-in-out transform origin-bottom ${
+                flip ? "rotate-x-180 opacity-0" : "rotate-x-0 opacity-100"
+              }`}
+              style={{ backfaceVisibility: "hidden" }}
+            >
+              {words[index]}
+            </span>
+          </span>
+        </h1>
 
-<p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto text-center">
-  Build, Engage, and Monetize Your Community — All in One Platform.
-</p>
+        <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto text-center">
+          Build, Engage, and Monetize Your Community — All in One Platform.
+        </p>
 
-
-     
         <div className="relative mx-auto mb-10 z-30">
           <div className="w-full max-w-2xl mx-auto aspect-video shadow-2xl rounded-lg overflow-hidden relative">
             {/* Thumbnail with play button */}
@@ -123,8 +120,6 @@ const playerRef = useRef<YT.Player | null>(null);
             </div>
           </div>
         </div>
-
-      
 
         <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 shadow-lg">
           Get Started for Free
