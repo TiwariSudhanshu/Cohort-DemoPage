@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+
 import Underline from "./ui/Underline";
 
 function ThreePillars() {
@@ -9,66 +10,65 @@ function ThreePillars() {
   const [active, setActive] = useState<(typeof TABS)[number]>("Build");
 
   const contentMap = {
-  Build: [
-  {
-    title: "4-Minute Launch Flow!",
-    text: "Start your own branded community space in just a few clicks. No clutter, no friction."
-  },
-  {
-    title: "Private Communities!",
-    text: "Limit access to select members, teams, or internal circles – perfect for exclusivity."
-  },
-  {
-    title: "Multi-Format Content Hosting!",
-    text: "Host videos, PDFs, modules, and discussions in one seamless place."
-  },
-  {
-    title: "Free or Paid Access!",
-    text: "Decide how your community lives: open to all or gated behind membership."
-  }
-],
-Engage: [
-  {
-    title: "Gamified Engagement with CHT Coins",
-    text: "Members earn CHT Coins by showing up, contributing, or completing streaks - driving consistent interaction and retention."
-  },
-  {
-    title: "Host Events",
-    text: "Plan and schedule events directly through your community calendar - so every member stays in sync and shows up."
-  },
-  {
-    title: "Integrated 1-Click Calls",
-    text: "No Zoom links or external platforms. Run live sessions, AMAs, or cohort calls directly inside your community."
-  },
-  {
-    title: "Video-First Content",
-    text: "Drop exclusive videos or course content for your community - all viewable inside the app, with no third-party links."
-  }
-],
-Monetize: [
-  {
-    title: "Community Ads",
-    text: "Once eligible, brands can run ads inside your community. You control what runs, and you get paid."
-  },
-  {
-    title: "Paid Communities",
-    text: "Charge for access with flexible pricing - one-time or recurring."
-  },
-  {
-    title: "Paid Content or Courses",
-    text: "Sell pre-recorded content securely - no leaks, no third-party tools."
-  },
-  {
-    title: "Paid Events & Webinars",
-    text: "Host and monetize live sessions directly inside the app."
-  }
-]
-
+    Build: [
+      {
+        title: "4-Minute Launch Flow!",
+        text: "Start your own branded community space in just a few clicks. No clutter, no friction.",
+      },
+      {
+        title: "Multi-Format Content Hosting!",
+        text: "Host videos, PDFs, modules, and discussions in one seamless place.",
+      },
+      {
+        title: "Private Communities!",
+        text: "Limit access to select members, teams, or internal circles – perfect for exclusivity.",
+      },
+      {
+        title: "Free or Paid Access!",
+        text: "Decide how your community lives: open to all or gated behind membership.",
+      },
+    ],
+    Engage: [
+      {
+        title: "Gamified Engagement with CHT Coins",
+        text: "Members earn CHT Coins by showing up, contributing, or completing streaks - driving consistent interaction and retention.",
+      },
+      {
+        title: "Host Events",
+        text: "Plan and schedule events directly through your community calendar - so every member stays in sync and shows up.",
+      },
+      {
+        title: "Integrated 1-Click Calls",
+        text: "No Zoom links or external platforms. Run live sessions, AMAs, or cohort calls directly inside your community.",
+      },
+      {
+        title: "Video-First Content",
+        text: "Drop exclusive videos or course content for your community - all viewable inside the app, with no third-party links.",
+      },
+    ],
+    Monetize: [
+      {
+        title: "Community Ads",
+        text: "Once eligible, brands can run ads inside your community. You control what runs, and you get paid.",
+      },
+      {
+        title: "Paid Communities",
+        text: "Charge for access with flexible pricing - one-time or recurring.",
+      },
+      {
+        title: "Paid Content or Courses",
+        text: "Sell pre-recorded content securely - no leaks, no third-party tools.",
+      },
+      {
+        title: "Paid Events & Webinars",
+        text: "Host and monetize live sessions directly inside the app.",
+      },
+    ],
   };
 
   return (
     <>
-      <section className="bg-black text-white relative">
+      <section className=" bg-black text-white relative">
         <div className="text-center mb-6">
           <span className="inline-block bg-white text-purple-600 text-xs font-semibold px-4 py-1 rounded-full tracking-widest uppercase">
             Pillars
@@ -76,7 +76,12 @@ Monetize: [
         </div>
 
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-10 text-white">
-          The 3 Pillars of Powerful <Underline>Communities</Underline>
+          The 3 Pillars of Powerful{" "}
+          <span className="relative inline-block">
+            <span className="relative z-10">
+              <Underline> Communities</Underline>
+            </span>
+          </span>
         </h2>
 
         <div className="flex justify-center mb-12">
@@ -114,48 +119,79 @@ Monetize: [
         </div>
       </section>
 
-      <div className="relative w-full h-[600px] sm:h-[700px] md:h-[800px] mt-16">
+      <div className="relative w-full h-[600px]">
         <Image
           src="/Vector.png"
           alt="bg"
           fill
           className="object-cover brightness-50"
           sizes="100vw"
+          priority
         />
         <Image
           src="/pillar1.png"
           alt="pillar1"
           width={260}
           height={300}
-          className="absolute top-10 left-[5%] sm:left-[10%] w-[100px] sm:w-[180px] md:w-[260px] h-auto"
+          className="absolute top-10 left-[20%] w-[260px] h-auto"
         />
         <Image
           src="/pillar2.png"
           alt="pillar2"
           width={260}
           height={300}
-          className="absolute top-10 right-[5%] sm:right-[10%] w-[100px] sm:w-[180px] md:w-[260px] h-auto"
+          className="absolute top-10 right-[20%] w-[260px] h-auto"
         />
         <Image
           src="/pillar3.png"
           alt="pillar3"
           width={220}
           height={280}
-          className="absolute bottom-40 sm:bottom-12 left-[10%] sm:left-[10%] w-[90px] sm:w-[160px] md:w-[220px] h-auto"
+          className="absolute bottom-10 left-[15%] w-[220px] h-auto"
         />
         <Image
-          src="/frame6.png"
-          alt="frame6"
-          width={500}
-          height={500}
-          className="absolute top-[19%] left-1/2 -translate-x-1/2 w-[250px] sm:w-[400px] md:w-[600px] h-auto"
+          src="/pillar4.png"
+          alt="pillar4"
+          width={200}
+          height={260}
+          className="absolute bottom-12 right-[15%] w-[200px] h-auto"
         />
+        <Image
+          src="/pillar-center.png"
+          alt="pillar-center"
+          width={500}
+          height={600}
+          className="absolute w-[500px] top-40 left-1/2 -translate-x-1/2"
+        />
+      </div>
+
+      <div className="mt-16 flex justify-center">
+        <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg">
+          Get Started for Free
+        </button>
+      </div>
+
+      <div className="flex justify-center">
+        <Image
+          src="/Frame 5.png"
+          alt="frame"
+          width={1620}
+          height={800}
+          className="w-auto h-auto"
+          loading="lazy"
+          sizes="100vw"
+        />
+      </div>
+
+      <div className="flex justify-center px-5">
         <Image
           src="/frame2.png"
           alt="frame2"
-          width={300}
-          height={300}
-          className="absolute bottom-[30%] sm:bottom-[8%]  right-[8%] w-[200px] sm:w-[300px] md:w-[500px] h-auto"
+          loading="lazy"
+          width={1620}
+          height={800}
+          className="w-full h-auto rounded-3xl"
+          sizes="100vw"
         />
       </div>
     </>
