@@ -29,13 +29,13 @@ export default function AboutVision() {
       </div>
 
       {/* Vision Image Full Width with Padding */}
-      <div className="relative w-full px-4 md:px-8 lg:px-16 mt-[-6vmax] z-10">
+      <div className="relative w-full px-4 md:px-8 lg:px-16 mt-0 sm:mt-[-6vmax] z-10">
         <Image
           src="/about.png"
           alt="Vision Illustration"
           width={1920}
           height={800}
-          className="w-full h-auto rounded-3xl"
+          className="w-full h-60 sm:h-auto rounded-3xl"
           sizes="100vw"
         />
       </div>
