@@ -13,7 +13,7 @@ export default function Contact() {
       title: "Schedule a call",
       description: "Schedule a call with our team",
       detail: "Schedule Now →",
-      link: "tel:+917892921796",
+      link: "https://group.cohortsapp.com/widget/booking/uYui3GQaj8Z7qDdBXKxy",
     },
     {
       icon: "/contact-icon-2.png",
@@ -22,13 +22,13 @@ export default function Contact() {
       detail: "support@cohortsapp.com",
       link: "mailto:support@cohortsapp.com",
     },
-    {
-      icon: "/contact-icon-3.png",
-      title: "Chat to our Team",
-      description: "Speak to our friendly team",
-      detail: "Chat Now →",
-      link: "#",
-    },
+    // {
+    //   icon: "/contact-icon-3.png",
+    //   title: "Chat to our Team",
+    //   description: "Speak to our friendly team",
+    //   detail: "Chat Now →",
+    //   link: "#",
+    // },
   ];
 
   return (
@@ -47,7 +47,8 @@ export default function Contact() {
             Got a question? Reach out to us!
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 max-w-md sm:max-w-2xl mx-auto">
-            We're always here for creators, community builders, and changemakers like you.
+            We're always here for creators, community builders, and changemakers
+            like you.
           </p>
           <a
             href="mailto:support@cohortsapp.com"
@@ -65,8 +66,7 @@ export default function Contact() {
           </span>
         </div>
         <h2 className="text-center text-2xl sm:text-3xl md:text-5xl font-bold text-white">
-          <Underline>Get In Touch</Underline>
-          <span className="relative inline-block w-fit ml-2 sm:ml-3">with us</span>
+          <Underline>Get In Touch with us</Underline>
         </h2>
       </section>
 
@@ -89,7 +89,9 @@ export default function Contact() {
           className="w-full md:w-1/2 max-w-xl bg-black/30 backdrop-blur-sm p-6 sm:p-8 rounded-xl space-y-6 order-1 md:order-2"
         >
           <div>
-            <label className="block text-white font-semibold mb-1">Full Name</label>
+            <label className="block text-white font-semibold mb-1">
+              Full Name
+            </label>
             <div className="flex items-center bg-[#1A1A1A] px-4 py-3 rounded-lg">
               <img src="/name.png" alt="Name Icon" className="w-5 h-5 mr-3" />
               <input
@@ -103,7 +105,11 @@ export default function Contact() {
           <div>
             <label className="block text-white font-semibold mb-1">Email</label>
             <div className="flex items-center bg-[#1A1A1A] px-4 py-3 rounded-lg">
-              <img src="/message.png" alt="Email Icon" className="w-5 h-4 mr-3" />
+              <img
+                src="/message.png"
+                alt="Email Icon"
+                className="w-5 h-4 mr-3"
+              />
               <input
                 type="email"
                 placeholder="Email"
@@ -113,9 +119,15 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-white font-semibold mb-1">Phone Number</label>
+            <label className="block text-white font-semibold mb-1">
+              Phone Number
+            </label>
             <div className="flex items-center bg-[#1A1A1A] px-4 py-3 rounded-lg">
-              <img src="/phone.png" alt="Phone Icon" className="w-6 h-6 mr-3 ml-[-3px]" />
+              <img
+                src="/phone.png"
+                alt="Phone Icon"
+                className="w-6 h-6 mr-3 ml-[-3px]"
+              />
               <input
                 type="tel"
                 placeholder="Phone Number"
@@ -125,9 +137,15 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="block text-white font-semibold mb-1">Message</label>
+            <label className="block text-white font-semibold mb-1">
+              Message
+            </label>
             <div className="flex items-start bg-[#1A1A1A] px-4 py-3 rounded-lg">
-              <img src="/message.png" alt="Message Icon" className="w-5 h-4 mr-3 mt-1" />
+              <img
+                src="/message.png"
+                alt="Message Icon"
+                className="w-5 h-4 mr-3 mt-1"
+              />
               <textarea
                 rows={4}
                 placeholder="Message"
@@ -146,12 +164,13 @@ export default function Contact() {
       </section>
 
       <section className="py-12 px-4 sm:px-6 bg-black">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-4xl mx-auto flex justify-center gap-12 flex-wrap">
           {contacts.map((item, idx) => (
             <a
               key={idx}
               href={item.link}
-              className="group bg-gradient-to-b from-[#151515] to-[#1e102e] border border-[#272727] rounded-2xl p-6 hover:shadow-lg transition duration-300 flex flex-col gap-4"
+              target="_blank"
+              className="group bg-gradient-to-b from-[#151515] to-[#1e102e] border border-[#272727] rounded-2xl p-6 hover:shadow-lg transition duration-300 flex flex-col gap-4 w-full sm:w-[320px]"
             >
               <div className={`w-12 h-12 ${idx === 2 ? "scale-[1.2]" : ""}`}>
                 <img
@@ -161,7 +180,9 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <h3 className="text-white text-lg font-semibold">{item.title}</h3>
+                <h3 className="text-white text-lg font-semibold">
+                  {item.title}
+                </h3>
                 <p className="text-gray-400 text-sm mt-1">{item.description}</p>
                 <p className="text-white mt-2 font-semibold">{item.detail}</p>
               </div>

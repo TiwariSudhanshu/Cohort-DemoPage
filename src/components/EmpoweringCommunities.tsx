@@ -12,7 +12,7 @@ function EmpoweringCommunities() {
             Built for this
           </span>
         </div>
-        <h2 className="text-5xl mt-7 md:text-5xl leading-tight font-bold text-white mb-16">
+        <h2 className="text-2xl mt-7 md:text-5xl leading-tight font-bold text-white mb-16">
           Empowering Every Kind of <br />
           <span className="relative inline-block">
             <span className="relative z-10"><Underline>Community!</Underline></span>
@@ -130,9 +130,14 @@ function EmpoweringCommunities() {
 
         {/* CTA */}
         <div className="mt-16">
-          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-base md:text-lg font-semibold transition-colors shadow-lg">
-            Get Started for Free
-          </button>
+         <a
+          href="https://group.cohortsapp.com/widget/form/q4tCuBYn63FfdrPu7Rwz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 shadow-lg inline-block"
+        >
+          Get Started for Free
+        </a>
         </div>
       </div>
     </section>

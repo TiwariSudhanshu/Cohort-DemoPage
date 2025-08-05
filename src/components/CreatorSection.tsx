@@ -30,14 +30,14 @@ function CreatorSection() {
           </span>
         </div>
         <div className="relative z-10 w-full px-4 pt-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
+          <h2 className="text-2xl md:text-5xl font-bold mb-12 text-white">
             Creators and{" "}
             <span className="relative inline-block w-fit">
               <span className="relative z-10">
-                <Underline> Communities</Underline>
+                <Underline> Communities on Cohorts</Underline>
               </span>
             </span>{" "}
-            on Cohorts
+              
           </h2>
         </div>
 

@@ -12,7 +12,7 @@ export default function AboutBody() {
             Differentiation
           </span>
         </div>
-        <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
+        <h2 className="text-center text-2xl md:text-4xl font-bold mb-16">
           <Underline> What Makes Us Different?</Underline>
         </h2>
 

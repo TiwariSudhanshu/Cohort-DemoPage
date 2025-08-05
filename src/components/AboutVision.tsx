@@ -23,7 +23,7 @@ export default function AboutVision() {
           </span>
         </div>
 
-        <h2 className="text-3xl md:text-4xl font-bold relative inline-block ">
+        <h2 className="text-2xl md:text-4xl font-bold relative inline-block ">
           <Underline> Vision behind Cohorts! </Underline>
         </h2>
       </div>

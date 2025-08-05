@@ -84,7 +84,7 @@ export default function FAQ() {
       </div>
 
       {/* Heading with underline */}
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-16 text-white">
+      <h2 className="text-center text-2xl md:text-4xl font-bold mb-16 text-white">
         Frequently{" "}
         <span className="relative inline-block">
           <span className="relative z-10">

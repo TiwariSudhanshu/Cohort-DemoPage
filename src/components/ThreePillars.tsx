@@ -75,7 +75,7 @@ function ThreePillars() {
           </span>
         </div>
 
-        <h2 className="text-center text-4xl md:text-5xl font-bold mb-10 text-white">
+        <h2 className="text-center text-2xl md:text-5xl font-bold mb-10 text-white">
           The 3 Pillars of Powerful{" "}
           <span className="relative inline-block">
             <span className="relative z-10">
@@ -133,28 +133,28 @@ function ThreePillars() {
           alt="pillar1"
           width={260}
           height={300}
-          className="absolute top-10 left-[20%] w-[260px] h-auto"
+          className="absolute top-10 right-[5%] sm:left-[20%] w-[140px] sm:w-[260px] h-auto"
         />
         <Image
           src="/pillar2.png"
           alt="pillar2"
           width={260}
           height={300}
-          className="absolute top-10 right-[20%] w-[260px] h-auto"
+          className="absolute top-15 sm:top-10  sm:right-[10%] w-[140px] sm:w-[260px] h-auto"
         />
         <Image
           src="/pillar3.png"
           alt="pillar3"
           width={220}
           height={280}
-          className="absolute bottom-10 left-[15%] w-[220px] h-auto"
+          className="absolute bottom-10 left-[5%] sm:left-[15%] w-[140px] sm:w-[220px] h-auto"
         />
         <Image
           src="/pillar4.png"
           alt="pillar4"
           width={200}
           height={260}
-          className="absolute bottom-12 right-[15%] w-[200px] h-auto"
+          className="absolute bottom-12 sm:right-[15%] right-[5%] w-[140px] sm:w-[200px] h-auto"
         />
         <Image
           src="/pillar-center.png"
@@ -166,9 +166,14 @@ function ThreePillars() {
       </div>
 
       <div className="mt-16 flex justify-center">
-        <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg">
+       <a
+          href="https://group.cohortsapp.com/widget/form/q4tCuBYn63FfdrPu7Rwz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 shadow-lg inline-block"
+        >
           Get Started for Free
-        </button>
+        </a>
       </div>
 
       <div className="flex justify-center">
@@ -177,7 +182,7 @@ function ThreePillars() {
           alt="frame"
           width={1620}
           height={800}
-          className="w-auto h-auto"
+          className="w-auto "
           loading="lazy"
           sizes="100vw"
         />
@@ -190,7 +195,7 @@ function ThreePillars() {
           loading="lazy"
           width={1620}
           height={800}
-          className="w-full h-auto rounded-3xl"
+          className="w-full rounded-3xl  h-[20vmax] sm:h-[auto]"
           sizes="100vw"
         />
       </div>

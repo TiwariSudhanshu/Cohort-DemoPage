@@ -77,17 +77,17 @@ export default function Footer() {
           <h4 className="font-semibold text-sm text-white mb-4">Navigate</h4>
           <ul className="space-y-2 text-sm text-white/80">
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/" className="hover:text-white">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/about" className="hover:text-white">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/contact" className="hover:text-white">
                 Contact Us
               </a>
             </li>

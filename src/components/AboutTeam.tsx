@@ -14,7 +14,7 @@ export default function AboutTeam() {
               Team
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold relative inline-block mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold relative inline-block mb-12">
             <Underline> Builders of Cohorts App </Underline>
           </h2>
 
@@ -47,7 +47,7 @@ export default function AboutTeam() {
               Advisors/Investors
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold relative inline-block mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold relative inline-block mb-12">
             <Underline> Backers of Cohorts App </Underline>
           </h2>
 

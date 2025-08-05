@@ -22,8 +22,9 @@ export default function AboutHeroSection() {
         </p>
 
         <a
-          href="#"
+          href="https://group.cohortsapp.com/widget/form/q4tCuBYn63FfdrPu7Rwz"
           className="inline-block  bg-[#7816C9] hover:bg-purple-700 text-white px-8 py-3  rounded-lg text-lg font-semibold transition duration-300 shadow-lg"
+            target="_blank"
         >
           Get Started for Free
         </a>

@@ -121,9 +121,14 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 shadow-lg">
+        <a
+          href="https://group.cohortsapp.com/widget/form/q4tCuBYn63FfdrPu7Rwz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 shadow-lg inline-block"
+        >
           Get Started for Free
-        </button>
+        </a>
       </div>
 
       <style jsx>{`

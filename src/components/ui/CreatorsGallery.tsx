@@ -10,7 +10,7 @@ const ImageGallerySection = () => {
             <div className="flex gap-4 h-full" key={idx}>
               <div className="flex flex-col gap-2">
                 <div className="w-64 h-44 relative rounded-lg overflow-hidden">
-                  <Image src="/Creators/img1.jpg" alt="Creator 1" fill className="object-cover" />
+                  <Image src="/Creators/creator1.png" alt="Creator 1" fill className="object-cover" />
                 </div>
                 <div className="w-64 h-48 relative rounded-lg overflow-hidden">
                   <Image src="/Creators/img2.jpg" alt="Creator 2" fill className="object-cover" />
@@ -72,7 +72,7 @@ const ImageGallerySection = () => {
               </div>
 
               <div className="w-80 h-96 relative rounded-lg overflow-hidden">
-                <Image src="/Creators/img15.png" alt="Creator 15" fill className="object-cover" />
+                <Image src="/Creators/creator15.jpg" alt="Creator 15" fill className="object-cover" />
               </div>
 
               <div className="flex flex-col gap-2 w-48 h-96">

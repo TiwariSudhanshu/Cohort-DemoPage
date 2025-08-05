@@ -98,7 +98,7 @@ export default function CohortsFeaturesSection() {
             FEATURES
           </span>
         </div>
-        <h2 className="mb-8 text-center text-3xl font-bold md:text-5xl text-white">
+        <h2 className="mb-8 text-center text-2xl font-bold md:text-5xl text-white">
           What can you do on <br />
           <span className="relative inline-block w-fit">
             <span className="relative z-10">
